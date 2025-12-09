@@ -1,5 +1,5 @@
 package Paquete;
 
-public class Normal {
+public class Normal extends ClasePersonaje {
 
 }
