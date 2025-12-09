@@ -2,6 +2,12 @@ package Paquete;
 
 public class Main {
 	public static void main(String[] args) {
+		 Arma pistola = new Arma("Pistola", 10, 50f, 1.2f, 12);
+		Jugador jugador1 = new Jugador("Juan", 100);
+        Jugador jugador2 = new Jugador("Pedro", 100);
+
+        jugador1.atacar(pistola, jugador2);
+		
 		
 		//crear array
 		array array= new array();
