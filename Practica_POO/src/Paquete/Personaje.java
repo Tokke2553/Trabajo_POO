@@ -1,5 +1,4 @@
 package Paquete;
-
 import java.util.Random;
 
 public class Personaje {
