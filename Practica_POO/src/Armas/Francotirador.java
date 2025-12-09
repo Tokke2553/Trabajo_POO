@@ -1,4 +1,4 @@
-package Paquete;
+package Armas;
 
 public class Francotirador extends Arma{
 	public Francotirador() {

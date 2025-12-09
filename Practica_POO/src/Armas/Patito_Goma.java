@@ -1,4 +1,4 @@
-package Paquete;
+package Armas;
 
 public class Patito_Goma extends Arma{
 	public Patito_Goma() {

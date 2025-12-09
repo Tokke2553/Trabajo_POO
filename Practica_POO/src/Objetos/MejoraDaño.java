@@ -1,5 +1,5 @@
-package Paquete;
+package Objetos;
 
 public class MejoraDaño {
-//aa
+
 }

@@ -1,4 +1,4 @@
-package Paquete;
+package Armas;
 
 public class LanzaCohete extends Arma {
 	public LanzaCohete() {

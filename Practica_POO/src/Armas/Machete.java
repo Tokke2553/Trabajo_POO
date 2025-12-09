@@ -1,4 +1,4 @@
-package Paquete;
+package Armas;
 
 public class Machete extends Arma{
 	public Machete() {
