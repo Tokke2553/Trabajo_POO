@@ -1,5 +1,5 @@
 package Paquete;
 
-public class Enano {
+public class Enano extends ClasePersonaje {
 
 }
