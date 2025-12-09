@@ -1,5 +1,5 @@
 package Paquete;
 
-public class Ivan {
+public class Curas {
 
 }

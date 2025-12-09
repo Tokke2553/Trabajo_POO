@@ -3,7 +3,7 @@ package Paquete;
 import java.util.Random;
 
 public class EliminarZonas {
-	//RAndom
+	//Random
 	Random random = new Random();
 	//array de tormenta
 	private array targetArray;

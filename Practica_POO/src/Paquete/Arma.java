@@ -1,22 +1,41 @@
 package Paquete;
 
 public class Arma {
-	private String name;
-	private int damage;
+	private String nombre;
+	private int danio;
+	private float distancia;
+	private float multiplicador;
+	private int cargador;
 	
-	public Arma(String name, int damage) {
-		this.name= name;
-		this.damage = damage;
+	public Arma(String nombre, int danio, float distancia, float multiplicador, int cargador) {
+		this.nombre= nombre;
+		this.danio = danio;
+		this.distancia = distancia;
+		this.multiplicador = multiplicador;
+		this.cargador = cargador;
+	}
+	
+	public String getNombre() {
+		return nombre;
 		
+	}
+	public int getDanio() {
+		return danio;
 		
 	}
 	
-	public String getName() {
-		return name;
+	public float getDistancia() {
+		return distancia;
 		
 	}
-	public int getDamage() {
-		return damage;
+	
+	public float getMultiplicador() {
+		return multiplicador;
+		
+	}
+	public int getCargador() {
+		return cargador;
+		
 		
 	}
 }
