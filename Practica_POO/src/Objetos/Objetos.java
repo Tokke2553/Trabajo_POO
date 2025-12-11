@@ -2,6 +2,7 @@ package Objetos;
 
 public class Objetos {
 	
+	private String nombre;
 	private float vida;
 	private float escudo;
 	private float mejora_daño;
@@ -9,7 +10,9 @@ public class Objetos {
 	private float mejora_cargador;
 	private float mejora_alcance;
 	
-	public Objetos(float vida, float escudo, float mejora_daño, float mejora_precision, float mejora_cargador, float mejora_alcance) {
+	public Objetos(String nombre,float vida, float escudo, float mejora_daño, float mejora_precision, float mejora_cargador, float mejora_alcance) {
+		
+		this.nombre = nombre;
 		this.vida = vida;
 		this.escudo = escudo;
 		this.mejora_daño = mejora_daño;
@@ -18,6 +21,10 @@ public class Objetos {
 		this.mejora_alcance= mejora_alcance;
 		}
 
+	public String getNombre() {
+		return nombre;
+	}
+	
 	public float getVida() {
 		return vida;
 	}
