@@ -15,25 +15,25 @@ public class JuegoInterfaz {
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setLocationRelativeTo(null);
         ventana.setResizable(false);
-
+        ventana.setExtendedState(JFrame.MAXIMIZED_BOTH);
         JPanel panelFondo = new JPanel() {
 
             ImageIcon imagenIcon = new ImageIcon(JuegoInterfaz.class.getResource("fondo.jpg"));
-            Image fondo;{
-            	fondo = imagenIcon.getImage().getScaledInstance(800, 600, Image.SCALE_SMOOTH);
+
+            @Override
+            protected void paintComponent(Graphics g) {//Aqui me he ayudado de la IA porque no sabia como poner una imagen de fondo
+                super.paintComponent(g);
+                g.drawImage(imagenIcon.getImage(), 0, 0, getWidth(), getHeight(), this);
             }
             
-            @Override
-            protected void paintComponent(Graphics g) { //Aqui me he ayudado de la IA porque no sabia como poner una imagen de fondo             
-                    g.drawImage(fondo, 0, 0, this); 
-            }
         };
+
 
         panelFondo.setLayout(null);
         ventana.setContentPane(panelFondo);
 
         JButton btnIniciar = new JButton("INICIAR PARTIDA");
-        btnIniciar.setBounds(300, 200, 200, 50);
+        btnIniciar.setBounds(750, 400, 200, 50);
         btnIniciar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -43,7 +43,7 @@ public class JuegoInterfaz {
         panelFondo.add(btnIniciar);
 
         JButton btnSalir = new JButton("SALIR AL ESCRITORIO");
-        btnSalir.setBounds(300, 300, 200, 50);
+        btnSalir.setBounds(750, 600, 200, 50);
         
         //Aqui he usado inteligencia artificial porque no sabia como hacer para que clicando un boton se saliera del programa.
         btnSalir.addActionListener(new ActionListener() {
