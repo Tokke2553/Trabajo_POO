@@ -1,5 +1,7 @@
 package Paquete;
 
+import Armas.Arma;
+
 public class Jugador {
 	
 	    private String nombre;
@@ -35,8 +37,6 @@ public class Jugador {
 	        System.out.println(nombre + " atacó a " + enemigo.getNombre() +
 	                           " con " + arma.getNombre() + " causando " + danioTotal + " de daño.");
 	    }
-	   public void Arma() {
-		   this.Arma();
-	   }
+	   
 }
 
