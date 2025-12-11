@@ -26,9 +26,7 @@ public class JuegoInterfaz {
                 super.paintComponent(g);
                 
                 Image imagen = imagenIcon.getImage();
-                if (imagen != null) {
                     g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-                }
             }
         };
 
@@ -40,7 +38,7 @@ public class JuegoInterfaz {
         panelBotones.setOpaque(false);
 
         JButton btnIniciar = new JButton("INICIAR PARTIDA");
-        btnIniciar.setPreferredSize(new Dimension(200, 50)); 
+        btnIniciar.setPreferredSize(new Dimension(300, 75)); 
         btnIniciar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -49,7 +47,7 @@ public class JuegoInterfaz {
         });
         
         JButton btnSalir = new JButton("SALIR AL ESCRITORIO");
-        btnSalir.setPreferredSize(new Dimension(200, 50)); 
+        btnSalir.setPreferredSize(new Dimension(300, 75)); 
         
         btnSalir.addActionListener(new ActionListener() {
             @Override
