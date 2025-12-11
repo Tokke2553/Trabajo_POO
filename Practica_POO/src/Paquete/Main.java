@@ -1,12 +1,9 @@
 package Paquete;
 
-<<<<<<< HEAD
-=======
-
 import Armas.*;
 import Objetos.*;
 import Armas.Arma;
->>>>>>> 46bf57f855cb8406d240e24be6493f23d6454105
+
 
 public class Main {
     public static void main(String[] args) {
