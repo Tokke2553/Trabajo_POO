@@ -39,5 +39,7 @@ public class Jugador {
 	                           " con " + arma.getNombre() + " causando " + danioTotal + " de daño.");
 	    }
 	   
-}
+	    }
+	   
+
 
