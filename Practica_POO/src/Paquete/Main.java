@@ -1,5 +1,8 @@
 package Paquete;
 
+import Armas.*;
+import Objetos.*;
+
 public class Main {
 	public static void main(String[] args) {
 		 Arma pistola = new Arma("Pistola", 10, 50f, 1.2f, 12);
