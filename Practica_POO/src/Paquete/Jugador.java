@@ -1,5 +1,6 @@
 package Paquete;
 import Armas.*;
+import Objetos.*;
 
 import Armas.Arma;
 
