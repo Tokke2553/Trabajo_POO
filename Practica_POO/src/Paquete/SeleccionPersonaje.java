@@ -61,7 +61,7 @@ public class SeleccionPersonaje {
         btnCaract1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(ventana, "ENANO:\n- Velocidad: Alta\n- Resistencia: Baja\n- Habilidad Especial: Esquiva");
+                JOptionPane.showMessageDialog(ventana, "ENANO:\n \n- Vida: 75HP\n- Escudo: 100SP\n- Multiplicador daño: 0.9X\n- Multiplicador precisión: 1.3X\n \n - ARMAS: Francotirador, Patito de goma, Subfusil");
             }
         });
         
@@ -91,7 +91,7 @@ public class SeleccionPersonaje {
         btnCaract2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(ventana, "NORMAL:\n- Velocidad: Media\n- Resistencia: Media\n- Habilidad Especial: Equilibrio");
+                JOptionPane.showMessageDialog(ventana, "NORMAL:\n \n- Vida: 100HP\n- Escudo: 100SP\n- Multiplicador daño: 1X\n- Multiplicador precisión: 0.9X\n \n - ARMAS: Arco, Rifle, Escopeta");
             }
         });
 
@@ -121,7 +121,7 @@ public class SeleccionPersonaje {
         btnCaract3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(ventana, "GIGANTE:\n- Velocidad: Baja\n- Resistencia: Alta\n- Habilidad Especial: Carga");
+                JOptionPane.showMessageDialog(ventana, "GIGANTE:\n \n- Vida: 200HP\n- Escudo: 50SP\n- Multiplicador daño: 1.2X\n- Multiplicador precisión: 0.65X\n \n - ARMAS: Machete, Lanzacohetes, Fusil");
             }
         });
         

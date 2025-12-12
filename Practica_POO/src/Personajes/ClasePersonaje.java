@@ -2,12 +2,14 @@ package Personajes;
 
 public abstract class ClasePersonaje {
 
+	//Variables de los personajes
 	String personaje;
     int vida;
     int escudo;
     double multiDMG;
     double multiPRS;
     
+    //Constructor de ClasePersonaje
     public ClasePersonaje(String personaje, int vida, int escudo, double multiDMG, double multiPRS) {
     	this.personaje = personaje;
         this.vida = vida;
@@ -17,7 +19,7 @@ public abstract class ClasePersonaje {
         
     }
 
-  
+    //Getters estadisticas
     public String getPersonaje() {
 		return personaje;
 	}
