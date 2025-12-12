@@ -40,9 +40,14 @@ public class JuegoInterfaz {
         JButton btnIniciar = new JButton("INICIAR PARTIDA");
         btnIniciar.setPreferredSize(new Dimension(300, 75)); 
         btnIniciar.addActionListener(new ActionListener(){
-            @Override
+        	@Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(ventana, "Elige personaje");
+                
+        		ventana.setVisible(false);//He utilizado inteligencia artificial para saber que esta es la manera de que se cierre la interfaz al abrir la siguiente
+        		
+        		SeleccionPersonaje seleccion = new SeleccionPersonaje();
+                seleccion.mostrar();
+                
             }
         });
         
