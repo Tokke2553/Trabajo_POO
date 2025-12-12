@@ -39,6 +39,7 @@ public class JuegoInterfaz {
 
         JButton btnIniciar = new JButton("INICIAR PARTIDA");
         btnIniciar.setPreferredSize(new Dimension(300, 75)); 
+        btnIniciar.setBackground(Color.YELLOW);
         btnIniciar.addActionListener(new ActionListener(){
         	@Override
             public void actionPerformed(ActionEvent e) {
@@ -53,7 +54,7 @@ public class JuegoInterfaz {
         
         JButton btnSalir = new JButton("SALIR AL ESCRITORIO");
         btnSalir.setPreferredSize(new Dimension(300, 75)); 
-        
+        btnSalir.setBackground(Color.YELLOW);
         btnSalir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
