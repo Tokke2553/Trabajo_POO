@@ -2,8 +2,6 @@ package Paquete;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -123,7 +121,7 @@ public class SeleccionPersonaje {
     private void personajeSeleccionado(String personaje) {
         jugadores.get(jugadorActualIndex).personaje = personaje;
         
-        JOptionPane.showMessageDialog(ventana, "¡" + jugadores.get(jugadorActualIndex).nombre + " ha seleccionado a: " + personaje + "!");
+        JOptionPane.showMessageDialog(ventana, jugadores.get(jugadorActualIndex).nombre + " ha seleccionado a: " + personaje);
 
         jugadorActualIndex++;
 
@@ -138,7 +136,7 @@ public class SeleccionPersonaje {
         ventana.setVisible(false);
         ventana.dispose(); 
         
-        StringBuilder resumen = new StringBuilder("¡Selección de personajes completada!\n\n");
+        StringBuilder resumen = new StringBuilder("Selección de personajes completada\n");
         for (Jugador j : jugadores) {
             resumen.append(j.toString()).append("\n");
         }
