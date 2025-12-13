@@ -26,7 +26,7 @@ public class MapaGUI extends JPanel {
         try {
             // Usamos la ruta absoluta proporcionada por el usuario.
             // Creamos un objeto File para asegurarnos de que el path sea válido para el sistema operativo.
-            File imageFile = new File("C:\\Users\\kajem\\Downloads\\mapaF.jpg");
+            File imageFile = new File("mapaF.jpg");
             
             // Verificación: Asegúrate de que el archivo exista antes de intentar cargarlo
             if (imageFile.exists()) {
