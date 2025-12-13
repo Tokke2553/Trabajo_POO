@@ -3,6 +3,7 @@ import java.util.Random;
 
 public class Personaje {
 	//valores
+	private int posicion=0;
 	private int filaActual = -1; 
     private int columnaActual = -1;
 	//RAndom
