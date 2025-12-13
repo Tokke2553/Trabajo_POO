@@ -6,6 +6,6 @@ public class Curas extends Objetos implements Interfaz_Objetos {
 		super("Vendas",100,0,0,0,0,0);
 	}
 	public void usar(Jugador Jugador) {
-		
+		 Jugador.curar(getVida());
 	}
 }
