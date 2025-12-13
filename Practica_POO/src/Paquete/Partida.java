@@ -4,6 +4,8 @@ import Tormenta.*;
 import Objetos.*;
 import java.util.*;
 import Personajes.*;
+import Tormenta.EliminarZonas;
+import Tormenta.array;
 public class Partida {
 
 
