@@ -11,6 +11,7 @@ public class SeleccionPersonaje {
     private int numJugadores = 0; 
     private List<Jugador> jugadores; 
     private int jugadorActualIndex = 0; 
+    private String dificultadSeleccionada;
 
     private static class Jugador {
         String nombre;
@@ -49,14 +50,46 @@ public class SeleccionPersonaje {
     
 
     private void iniciarProcesoDeSeleccion() {
-        if (preguntarModoJuego()) {
-            pedirNombresJugadores();
+        if (preguntarDificultad()) {
+            if (preguntarModoJuego()) {
+                pedirNombresJugadores();
+            } else {
+                ventana.dispose(); 
+                System.exit(0);
+            }
         } else {
             ventana.dispose(); 
             System.exit(0);
         }
     }
     
+    // NUEVO MÉTODO para preguntar la dificultad
+    private boolean preguntarDificultad() {
+        String[] dificultades = {"Fácil", "Intermedio", "Difícil"};
+        JComboBox<String> dificultadSelector = new JComboBox<>(dificultades);
+        
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("Selecciona el nivel de dificultad:"));
+        panel.add(dificultadSelector);
+
+        int resultado = JOptionPane.showConfirmDialog(
+            ventana, 
+            panel, 
+            "Selección de Dificultad", 
+            JOptionPane.OK_CANCEL_OPTION, 
+            JOptionPane.QUESTION_MESSAGE
+        );
+
+        if (resultado == JOptionPane.OK_OPTION) {
+            dificultadSeleccionada = (String) dificultadSelector.getSelectedItem();
+            JOptionPane.showMessageDialog(ventana, "Dificultad seleccionada: " + dificultadSeleccionada, "Confirmación", JOptionPane.INFORMATION_MESSAGE);
+            return true;
+        } else {
+            return false;
+        }
+    }
+    // FIN NUEVO MÉTODO
+
     private boolean preguntarModoJuego() {
         String[] modos = {"Solo (1)", "Duo (2)", "Squad (4)"};
         JComboBox<String> modoSelector = new JComboBox<>(modos);
@@ -114,7 +147,7 @@ public class SeleccionPersonaje {
     }
     
     private void mostrarInfoJugadorActual() {
-        ventana.setTitle("Selección de Personaje - Turno de: " + jugadores.get(jugadorActualIndex).nombre);
+        ventana.setTitle("Selección de Personaje - Turno de: " + jugadores.get(jugadorActualIndex).nombre + " | Dificultad: " + dificultadSeleccionada); // Muestra la dificultad en el título
     }
     
     private void personajeSeleccionado(String personaje) {
@@ -136,6 +169,7 @@ public class SeleccionPersonaje {
         ventana.dispose(); 
         
         StringBuilder resumen = new StringBuilder("Selección de personajes completada\n");
+        resumen.append("Dificultad del juego: ").append(dificultadSeleccionada).append("\n\n"); // Agrega la dificultad al resumen final
         for (Jugador j : jugadores) {
             resumen.append(j.toString()).append("\n");
         }
