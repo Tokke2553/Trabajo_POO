@@ -6,7 +6,7 @@ public class Enano extends ClasePersonaje {
 	
 	public Enano() { 
 		//Valores enano para la superclase
-		super("Enano", 75, 100, 0.9, 1.3); 
+		super("Enano", 75, 100, 1.2, 0.9, 1.3); 
 	}
 	
 		public Arma[] getArmas() {

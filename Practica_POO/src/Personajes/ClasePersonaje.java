@@ -2,26 +2,31 @@ package Personajes;
 
 import Armas.*;
 
+import java.util.*;
+
 public abstract class ClasePersonaje {
 
 	//Variables de los personajes
 	String personaje;
     int vida;
     int escudo;
+    double multiDST;
     double multiDMG;
     double multiPRS;
     
     //Guardamos arma en una variable
     Arma arma;
+  
     
     //Constructor de ClasePersonaje
-    public ClasePersonaje(String personaje, int vida, int escudo, double multiDMG, double multiPRS) {
+    public ClasePersonaje(String personaje, int vida, int escudo, double multiDST, double multiDMG, double multiPRS) {
     	
     	this.personaje = personaje;
         this.vida = vida;
         this.escudo = escudo;
         this.multiDMG = multiDMG;
         this.multiPRS = multiPRS;
+        this.multiDST = multiDST;
         
     }
     
@@ -74,6 +79,10 @@ public abstract class ClasePersonaje {
 		return escudo;
 	}
 
+	public double getMultiDST() {
+		return multiDST;
+	}
+
 	public double getMultiDMG() {
 		return multiDMG;
 	}
@@ -84,6 +93,11 @@ public abstract class ClasePersonaje {
 
 	public Arma getArma() {
 		return arma;
+	}
+
+	//Eclipse me sugerió esto para que values en SeleccionPersonaje no diera errores
+	public static ClasePersonaje[] values() {
+		return null;
 	}
 	
 	
