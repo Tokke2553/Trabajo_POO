@@ -31,7 +31,7 @@ public class Jugador {
 	    	new MejoraPrecision()    	
 	    };
 	    
-	    private static Objetos obtenerObjetoAleatorio() {
+	    public static Objetos obtenerObjetoAleatorio() {
 	    	 float probabilidad = 0.75f;
     	    Random rand = new Random();
   
@@ -45,7 +45,7 @@ public class Jugador {
 	    
 	    
 	    public void curar(float cantidad) {
-	    	this.vida =+ cantidad;
+	    	this.vida += cantidad;
 	    	if (vida > 100) {
 	    		this.vida = 100;
 	    	}
