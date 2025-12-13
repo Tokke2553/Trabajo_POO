@@ -11,8 +11,12 @@ public abstract class ClasePersonaje {
     double multiDMG;
     double multiPRS;
     
+    //Guardamos arma en una variable
+    Arma arma;
+    
     //Constructor de ClasePersonaje
     public ClasePersonaje(String personaje, int vida, int escudo, double multiDMG, double multiPRS) {
+    	
     	this.personaje = personaje;
         this.vida = vida;
         this.escudo = escudo;
@@ -20,6 +24,42 @@ public abstract class ClasePersonaje {
         this.multiPRS = multiPRS;
         
     }
+    
+    
+    //Getter de array de armas
+    public abstract Arma[] getArmas();
+    
+    public void setArma(Arma arma) {
+    	//Si armaPermitida ha devuelto que el arma no es válida, se imprimirá un mensaje por consola avisando al usuario
+    	if (armaPermitida(arma) == false) {
+    	       
+        	System.out.println("ARMA NO VÁLIDA PARA ESTE PERSONAJE.");
+ 
+        }else{
+    	
+    	this.arma = arma;
+    	
+        }
+    }
+    	
+       
+    
+    //Funcion que comprueba si el arma elegida está permitida
+    protected boolean armaPermitida(Arma arma) {
+    	
+    	//For que recorre el array de las armas
+        for (Arma a : getArmas()) {
+        	
+            if (a.getClass().equals(arma.getClass())) {
+            	
+            	//En caso de que el arma seleccionada se encuentre en el array, devuelve true
+                return true;
+            }
+        }//Si no, devuelve false
+        return false;
+    }
+    
+ 
 
     //Getters estadisticas
     public String getPersonaje() {
@@ -41,8 +81,18 @@ public abstract class ClasePersonaje {
 	public double getMultiPRS() {
 		return multiPRS;
 	}
-	 public abstract Arma[] getArmas();
+
+	public Arma getArma() {
+		return arma;
+	}
+	
+	
+	
+	 
+	 
+	 
 }
+		
 	
 	
 	
