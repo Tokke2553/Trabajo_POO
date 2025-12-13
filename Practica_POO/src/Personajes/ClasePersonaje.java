@@ -8,8 +8,8 @@ public abstract class ClasePersonaje {
 
 	//Variables de los personajes
 	String personaje;
-	float vida;
-	float escudo;
+    int vida;
+    int escudo;
     float multiDST;
     float multiDMG;
     float multiPRS;
@@ -20,7 +20,7 @@ public abstract class ClasePersonaje {
   
     
     //Constructor de ClasePersonaje
-    public ClasePersonaje(String personaje, float vida, float escudo, float multiDST, float multiDMG, float multiPRS) {
+    public ClasePersonaje(String personaje, int vida, int escudo, float multiDST, float multiDMG, float multiPRS,int tamCargador) {
     	
     	this.personaje = personaje;
         this.vida = vida;
@@ -28,7 +28,7 @@ public abstract class ClasePersonaje {
         this.multiDMG = multiDMG;
         this.multiPRS = multiPRS;
         this.multiDST = multiDST;
-      
+        this.tamCargador = tamCargador;
         
     }
     
@@ -73,11 +73,11 @@ public abstract class ClasePersonaje {
 		return personaje;
 	}
 
-	public float getVida() {
+	public int getVida() {
 		return vida;
 	}
 
-	public float getEscudo() {
+	public int getEscudo() {
 		return escudo;
 	}
 
@@ -93,7 +93,9 @@ public abstract class ClasePersonaje {
 		return multiPRS;
 	}
 	
-
+	public int getTamCargador() {
+		return tamCargador;
+	}
 	
 	public Arma getArma() {
 		return arma;
@@ -105,11 +107,6 @@ public abstract class ClasePersonaje {
 	    return new ClasePersonaje[] { new Enano(), new Normal(), new Gigante() };
 	}
 
-
-	public abstract ClasePersonaje[] values();
-	
-	
-	 
 	 
 	 
 }
