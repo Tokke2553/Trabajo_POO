@@ -37,7 +37,10 @@ public class Arma {
 	public int getCargador() {
 		return cargador;
 	}	
-		
+	public void setCargador(int cargador) {
+	    this.cargador = cargador;
+	}
+	
 	public float calcularDanio() {
 		if (cargador <= 0) {
 			return 0;

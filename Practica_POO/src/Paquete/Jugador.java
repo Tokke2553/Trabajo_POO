@@ -51,7 +51,7 @@ public class Jugador {
 	    	}
 	    }
 	    public void implementacionEscudo (float cantidad) {
-	    	this.escudo =+ cantidad;
+	    	this.escudo += cantidad;
 	    	if (escudo > 100) {
 	    		this.escudo = 100;
 	    	}
@@ -83,12 +83,21 @@ public class Jugador {
 	    }
 	    
 	    public void atacar(Jugador enemigo) {
-	        float danio = ((arma.getDanio()) * arma.getMultiplicador());
-	        danio -= enemigo.escudo;
-	        if (danio < 0) danio = 0;
-
-	        enemigo.recibirDanio(danio);
-
+	        float danio = arma.calcularDanio();
+	        float danioRestante = danio - enemigo.escudo;
+	       if (danioRestante > 0) {
+	    	   enemigo.vida -= danioRestante;
+	    	   enemigo.escudo = 0;
+	    	  
+	       }else {
+	    	   enemigo.escudo -= danio; 
+	    	      
+	       }
+	        
+	       if (enemigo.vida < 0) {
+	    	   enemigo.vida = 0;   
+	       }
+	       
 	        System.out.println(nombre + " ataca a " + enemigo.nombre + " con " + arma.getNombre() + " causando " + danio + " de daño");
 	    }
 	   
