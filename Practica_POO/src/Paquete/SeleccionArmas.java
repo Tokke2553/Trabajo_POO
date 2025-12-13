@@ -113,7 +113,7 @@ public class SeleccionArmas {
         
         StringBuilder resumen = new StringBuilder("Partida iniciandose...");
         resumen.append("Dificultad del juego: ").append(dificultad).append("\n");
-        resumen.append("--- Resumen del Equipo ---\n");
+        resumen.append(" Resumen del Equipo \n");
         
         for (SeleccionPersonaje.Jugador j : jugadores) {
             resumen.append(j.toString()).append("\n");

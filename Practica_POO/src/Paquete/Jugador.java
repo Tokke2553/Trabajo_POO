@@ -83,6 +83,7 @@ public class Jugador {
 	    }
 	    
 	    public void atacar(Jugador enemigo) {
+
 	        float danio = arma.calcularDanio();
 	        float danioRestante = danio - enemigo.escudo;
 	       if (danioRestante > 0) {
@@ -97,7 +98,7 @@ public class Jugador {
 	       if (enemigo.vida < 0) {
 	    	   enemigo.vida = 0;   
 	       }
-	       
+
 	        System.out.println(nombre + " ataca a " + enemigo.nombre + " con " + arma.getNombre() + " causando " + danio + " de daño");
 	    }
 	   
