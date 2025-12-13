@@ -1,5 +1,6 @@
 package Paquete;
 import Armas.*;
+import Objetos.*;
 import java.util.*;
 import Personajes.*;
 public class Partida {
@@ -21,7 +22,9 @@ public void crearBots(int cantidad) {
 		
 		 ClasePersonaje tipo = ClasePersonaje.values()[random.nextInt(3)];
 
+
          jugadores.add(new Jugador("Bot_" + (i + 1), tipo.getVida(),tipo.getEscudo(),PoolArmas.armaPara(tipo),Jugador.obtenerObjetoAleatorio(),true));
+
      }
 	}
 	

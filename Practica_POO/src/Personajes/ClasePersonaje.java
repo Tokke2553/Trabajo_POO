@@ -10,16 +10,17 @@ public abstract class ClasePersonaje {
 	String personaje;
     int vida;
     int escudo;
-    double multiDST;
-    double multiDMG;
-    double multiPRS;
+    float multiDST;
+    float multiDMG;
+    float multiPRS;
+    int tamCargador;
     
     //Guardamos arma en una variable
     Arma arma;
   
     
     //Constructor de ClasePersonaje
-    public ClasePersonaje(String personaje, int vida, int escudo, double multiDST, double multiDMG, double multiPRS) {
+    public ClasePersonaje(String personaje, int vida, int escudo, float multiDST, float multiDMG, float multiPRS,int tamCargador) {
     	
     	this.personaje = personaje;
         this.vida = vida;
@@ -27,6 +28,7 @@ public abstract class ClasePersonaje {
         this.multiDMG = multiDMG;
         this.multiPRS = multiPRS;
         this.multiDST = multiDST;
+        this.tamCargador = tamCargador;
         
     }
     
@@ -79,21 +81,26 @@ public abstract class ClasePersonaje {
 		return escudo;
 	}
 
-	public double getMultiDST() {
+	public float getMultiDST() {
 		return multiDST;
 	}
 
-	public double getMultiDMG() {
+	public float getMultiDMG() {
 		return multiDMG;
 	}
 
-	public double getMultiPRS() {
+	public float getMultiPRS() {
 		return multiPRS;
 	}
-
+	
+	public int getTamCargador() {
+		return tamCargador;
+	}
+	
 	public Arma getArma() {
 		return arma;
 	}
+
 
 	//Eclipse me sugerió esto para que values en SeleccionPersonaje no diera errores
 	public static ClasePersonaje[] values() {
