@@ -45,7 +45,7 @@ public class Jugador {
 	    
 	    
 	    public void curar(float cantidad) {
-	    	this.vida =+ 100;
+	    	this.vida =+ cantidad;
 	    	if (vida > 100) {
 	    		this.vida = 100;
 	    	}
