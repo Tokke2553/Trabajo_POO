@@ -50,6 +50,13 @@ public class Jugador {
 	    		this.vida = 100;
 	    	}
 	    }
+	    public void implementacionEscudo (float cantidad) {
+	    	this.escudo =+ cantidad;
+	    	if (escudo > 100) {
+	    		this.escudo = 100;
+	    	}
+	    }
+	    
 	    public boolean estadoJugador(){
 	    	return vida > 0;
 	    	
