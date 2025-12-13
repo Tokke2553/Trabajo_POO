@@ -9,13 +9,16 @@ public class SeleccionPersonaje {
 
     private JFrame ventana;
     private int numJugadores = 0; 
+    // Referencia a la clase Jugador anidada
     private List<Jugador> jugadores; 
     private int jugadorActualIndex = 0; 
     private String dificultadSeleccionada;
 
-    private static class Jugador {
+    // CAMBIO CLAVE: Clase Jugador ahora es PUBLIC STATIC
+    public static class Jugador {
         String nombre;
         String personaje;
+        String arma; // Campo añadido
 
         public Jugador(String nombre) {
             this.nombre = nombre;
@@ -23,7 +26,8 @@ public class SeleccionPersonaje {
 
         @Override
         public String toString() {
-            return "Nombre: " + nombre + ", Personaje: " + personaje;
+            // toString modificado para incluir el arma
+            return "Nombre: " + nombre + ", Personaje: " + personaje + ", Arma: " + arma;
         }
     }
 
@@ -63,7 +67,6 @@ public class SeleccionPersonaje {
         }
     }
     
-    // NUEVO MÉTODO para preguntar la dificultad
     private boolean preguntarDificultad() {
         String[] dificultades = {"Fácil", "Intermedio", "Difícil"};
         JComboBox<String> dificultadSelector = new JComboBox<>(dificultades);
@@ -88,7 +91,6 @@ public class SeleccionPersonaje {
             return false;
         }
     }
-    // FIN NUEVO MÉTODO
 
     private boolean preguntarModoJuego() {
         String[] modos = {"Solo (1)", "Duo (2)", "Squad (4)"};
@@ -147,7 +149,7 @@ public class SeleccionPersonaje {
     }
     
     private void mostrarInfoJugadorActual() {
-        ventana.setTitle("Selección de Personaje - Turno de: " + jugadores.get(jugadorActualIndex).nombre + " | Dificultad: " + dificultadSeleccionada); // Muestra la dificultad en el título
+        ventana.setTitle("Selección de Personaje - Turno de: " + jugadores.get(jugadorActualIndex).nombre + " | Dificultad: " + dificultadSeleccionada);
     }
     
     private void personajeSeleccionado(String personaje) {
@@ -168,14 +170,8 @@ public class SeleccionPersonaje {
         ventana.setVisible(false);
         ventana.dispose(); 
         
-        StringBuilder resumen = new StringBuilder("Selección de personajes completada\n");
-        resumen.append("Dificultad del juego: ").append(dificultadSeleccionada).append("\n\n"); // Agrega la dificultad al resumen final
-        for (Jugador j : jugadores) {
-            resumen.append(j.toString()).append("\n");
-        }
-        
-        JOptionPane.showMessageDialog(null, resumen.toString(), "Resumen del Equipo", JOptionPane.INFORMATION_MESSAGE);
-        
+        // Llama a la nueva interfaz de selección de armas
+        new SeleccionArmas(jugadores, dificultadSeleccionada);
     }
     
     private void configurarInterfaz() {
