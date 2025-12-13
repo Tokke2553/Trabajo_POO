@@ -1,5 +1,6 @@
 package Paquete;
 import Armas.*;
+import Tormenta.*;
 import Objetos.*;
 import java.util.*;
 import Personajes.*;
