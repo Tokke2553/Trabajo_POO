@@ -7,17 +7,20 @@ public class Jugador {
 	
 	    private String nombre;
 	    private float vida;
+	    private float vidaMax;
 	    private float escudo;
 	    private Arma arma;
 	    private Objetos objeto;
 	    private boolean bot;
-	    public Jugador(String nombre, float vida, float escudo ,Arma arma, Objetos objeto ,boolean bot) {
+	    public Jugador(String nombre, float vida,float vidaMax, float escudo ,Arma arma, Objetos objeto ,boolean bot) {
 	        this.nombre = nombre;
 	        this.vida = vida;
+	        this.vidaMax = vidaMax;
 	        this.escudo = escudo;
 	        this.arma = arma;
 	        this.objeto = objeto;
 	        this.bot = bot;
+	        
 	        
 	    }
 	    private static final Objetos[] Pool_Objetos = {
