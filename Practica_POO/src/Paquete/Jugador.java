@@ -83,7 +83,7 @@ public class Jugador {
 	    }
 	    
 	    public void atacar(Jugador enemigo) {
-	        float danio = ((arma.getDanio()) * arma.getMultiplicador());
+	        float danio = ((arma.getDanio()) * arma.getPrecision());
 	        danio -= enemigo.escudo;
 	        if (danio < 0) danio = 0;
 

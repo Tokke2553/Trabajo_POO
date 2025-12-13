@@ -2,7 +2,7 @@ package Armas;
 
 public class Subfusil extends Arma{
 	public Subfusil() {
-		super("Subfusil", 20, 0.5f, 0.5f,10);
+		super("Subfusil", 18, 1.4f, 0.7f, 40);
 		
 	}
 }
