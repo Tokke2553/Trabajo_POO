@@ -4,14 +4,14 @@ public class Arma {
 	private String nombre;
 	private int danio;
 	private float distancia;
-	private float multiplicador;
+	private float precision;
 	private int cargador;
 	
-	public Arma(String nombre, int danio, float distancia, float multiplicador, int cargador) {
+	public Arma(String nombre, int danio, float distancia, float precision, int cargador) {
 		this.nombre= nombre;
 		this.danio = danio;
 		this.distancia = distancia;
-		this.multiplicador = multiplicador;
+		this.precision = precision;
 		this.cargador = cargador;
 	}
 	
@@ -30,21 +30,24 @@ public class Arma {
 		
 	}
 	
-	public float getMultiplicador() {
-		return multiplicador;
+	public float getPrecision() {
+		return precision;
 		
 	}
 	public int getCargador() {
 		return cargador;
 	}	
-		
+	public void setCargador(int cargador) {
+	    this.cargador = cargador;
+	}
+	
 	public float calcularDanio() {
 		if (cargador <= 0) {
 			return 0;
 			
 		}
 		cargador--;
-		return (danio*multiplicador);
+		return (danio*precision);
 	}
 		
 	

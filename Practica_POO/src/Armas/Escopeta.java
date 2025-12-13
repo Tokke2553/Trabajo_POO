@@ -2,7 +2,7 @@ package Armas;
 
 public class Escopeta extends Arma{
 	public Escopeta() {
-		super("Escopeta", 20, 0.5f, 0.5f,10);
+		super("Escopeta", 60, 1.4f, 0.6f,10);
 		
 	}
 }

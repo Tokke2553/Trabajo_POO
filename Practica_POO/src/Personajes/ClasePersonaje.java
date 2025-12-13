@@ -100,11 +100,13 @@ public abstract class ClasePersonaje {
 	}
 
 
-	//Eclipse me sugerió esto para que values en SeleccionPersonaje no diera errores
-	public static ClasePersonaje[] values() {
-		return null;
-	}
 	
+	public static ClasePersonaje[] obtenerClases() {
+	    return new ClasePersonaje[] { new Enano(), new Normal(), new Gigante() };
+	}
+
+
+	public abstract ClasePersonaje[] values();
 	
 	
 	 
