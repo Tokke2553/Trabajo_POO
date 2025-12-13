@@ -1,4 +1,4 @@
-package Paquete;
+package Tormenta;
 
 import java.util.Random;
 
