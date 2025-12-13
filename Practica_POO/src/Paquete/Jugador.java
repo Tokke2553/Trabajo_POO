@@ -1,16 +1,24 @@
 package Paquete;
 import Armas.*;
 import Objetos.*;
-import Armas.Arma;
+
 import java.util.Random;
 public class Jugador {
 	
 	    private String nombre;
-	    private int vida;
-
-	    public Jugador(String nombre, int vida) {
+	    private float vida;
+	    private float escudo;
+	    private Arma arma;
+	    private Objetos objeto;
+	    private boolean bot;
+	    public Jugador(String nombre, float vida, float escudo ,Arma arma, Objetos objeto ,boolean bot) {
 	        this.nombre = nombre;
 	        this.vida = vida;
+	        this.escudo = escudo;
+	        this.arma = arma;
+	        this.objeto = objeto;
+	        this.bot = bot;
+	        
 	    }
 	    private static final Objetos[] Pool_Objetos = {
 	    	new Curas(),
@@ -35,30 +43,39 @@ public class Jugador {
     	    	}
 	    }
 	    
-	    public int getVida() {
+	    public boolean estadoJugador(){
+	    	return vida > 0;
+	    	
+	    } 
+	    public float getVida() {
 	        return vida;
 	    }
-
+	    public float getEscudo() {
+	    	return escudo;
+	    	
+	    }
 	    public String getNombre() {
 	        return nombre;
 	    }
 
-	    public void recibirDanio(int cantidad) {
-	        this.vida -= cantidad;
+	    public void recibirDanio(float danio) {
+	        this.vida -= danio;
 
 	        if (this.vida < 0) {
 	            this.vida = 0;
 	        }
 
-	        System.out.println(nombre + " ha recibido " + cantidad + " de daño. Vida restante: " + vida);
+	        System.out.println(nombre + " ha recibido " + danio + " de daño. Vida restante: " + vida);
 	    }
 	    
-	    public void atacar(Arma arma, Jugador enemigo) {
-	        int danioTotal = (int)(arma.getDanio() * arma.getMultiplicador());
-	        enemigo.recibirDanio(danioTotal);
+	    public void atacar(Jugador enemigo) {
+	        float danio = ((arma.getDanio()) * arma.getMultiplicador());
+	        danio -= enemigo.escudo;
+	        if (danio < 0) danio = 0;
 
-	        System.out.println(nombre + " atacó a " + enemigo.getNombre() +
-	                           " con " + arma.getNombre() + " causando " + danioTotal + " de daño.");
+	        enemigo.recibirDanio(danio);
+
+	        System.out.println(nombre + " ataca a " + enemigo.nombre + " con " + arma.getNombre() + " causando " + danio + " de daño");
 	    }
 	   
 	    }

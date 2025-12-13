@@ -1,5 +1,7 @@
 package Personajes;
 
+import Armas.*;
+
 public abstract class ClasePersonaje {
 
 	//Variables de los personajes
@@ -39,7 +41,7 @@ public abstract class ClasePersonaje {
 	public double getMultiPRS() {
 		return multiPRS;
 	}
-	
+	 public abstract Arma[] getArmas();
 }
 	
 	

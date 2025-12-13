@@ -15,6 +15,7 @@ public class Arma {
 		this.cargador = cargador;
 	}
 	
+	
 	public String getNombre() {
 		return nombre;
 		
@@ -35,7 +36,16 @@ public class Arma {
 	}
 	public int getCargador() {
 		return cargador;
+	}	
 		
-		
+	public float calcularDanio() {
+		if (cargador <= 0) {
+			return 0;
+			
+		}
+		cargador--;
+		return (danio*multiplicador);
 	}
+		
+	
 }
