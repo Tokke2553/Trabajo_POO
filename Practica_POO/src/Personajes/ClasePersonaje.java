@@ -15,7 +15,7 @@ public abstract class ClasePersonaje {
     float multiDMG;
     float multiPRS;
     int tamCargador;
-    
+    float vidaMax;
     //Guardamos arma en una variable
     Arma arma;
   
@@ -103,7 +103,9 @@ public abstract class ClasePersonaje {
 	public Arma getArma() {
 		return arma;
 	}
-
+	public float getVidaMax() {
+		return vidaMax;
+	}
 
 	
 	public static ClasePersonaje[] obtenerClases() {

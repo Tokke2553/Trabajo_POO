@@ -12,7 +12,7 @@ public class Jugador {
 	    private Arma arma;
 	    private Objetos objeto;
 	    private boolean bot;
-	    public Jugador(String nombre, float vida,float vidaMax, float escudo ,Arma arma, Objetos objeto ,boolean bot) {
+	    public Jugador(String nombre, float vida,float escudo, float vidaMax, Arma arma, Objetos objeto ,boolean bot) {
 	        this.nombre = nombre;
 	        this.vida = vida;
 	        this.vidaMax = vidaMax;
@@ -74,7 +74,11 @@ public class Jugador {
 	    public String getNombre() {
 	        return nombre;
 	    }
-
+	    
+	    public float getVidaMax() {
+	    	return vidaMax;
+	    	
+	    }
 	    public void recibirDanio(float danio) {
 	        this.vida -= danio;
 
