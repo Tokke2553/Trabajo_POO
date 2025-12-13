@@ -47,7 +47,6 @@ public class SeleccionPersonaje {
         }
     }
     
-    // --- LÓGICA DE JUEGO ---
 
     private void iniciarProcesoDeSeleccion() {
         if (preguntarModoJuego()) {
