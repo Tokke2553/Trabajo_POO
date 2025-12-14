@@ -16,11 +16,11 @@ public class MapaGUI {
     private LienzoMapa lienzo;
     private JButton btnRonda;
     
-    // --- VARIABLES DE ESTADO ---
-    private int zonaJugadorHumano = -1; // Almacena la zona (1-9) del jugador
-    private boolean esperandoViaje = false; // Bloquea el botón hasta que el humano elija zona
+    //Variables Lugares para jugadores
+    private int zonaJugadorHumano = -1; 
+    private boolean esperandoViaje = false; // Bloquear botón 
     private Random random = new Random();
-
+    
     private static final String[] CIUDADES = {
         "", "VIKING FIORD", "QUARRY PEAK", "TEMPLE FALLS", 
         "BUBBLE BOG", "METRO MELTDOWN", "SHROOM SHORES", 
