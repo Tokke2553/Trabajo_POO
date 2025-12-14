@@ -17,9 +17,10 @@ public class EliminarZonas {
         this.targetArray = arrayAModificar;
     }
 		//modificación de etormenta
-		public void cambioArray() {
+		public int cambioArray() {
 			//Acierto
 			boolean acierto= false;
+			 int zonaDestruida = -1;
 			//bucle para grantizar la destruccion
 			while(!acierto) {
 				//valores para j e i
@@ -41,6 +42,7 @@ public class EliminarZonas {
 					}
 					
 			}
+			return zonaDestruida;
 		}
 		public void ciudadesSeguras() {
 			//ciudades seguras

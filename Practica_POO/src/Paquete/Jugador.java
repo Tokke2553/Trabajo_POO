@@ -14,12 +14,12 @@ public class Jugador {
 	    private float multiplicadorPrecision;
 	    private float tamCargador;
 	    private Arma arma;
-	    private Objetos objeto;
+	    public Objetos objeto;
 	    private boolean bot;
 	    ClasePersonaje clase;
 	    
 	    
-	    public Jugador(String nombre, ClasePersonaje clase, Arma arma, Objetos objeto, boolean bot) {
+	    public Jugador(String nombre,float vida,float escudo,float vidaMax, Arma arma, Objetos objeto, boolean bot) {
 	        this.nombre = nombre;
 	        this.clase = clase;
 	        this.vidaMax = clase.getVidaMax();

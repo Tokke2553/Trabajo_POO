@@ -4,8 +4,7 @@ import Tormenta.*;
 import Objetos.*;
 import java.util.*;
 import Personajes.*;
-import Tormenta.EliminarZonas;
-import Tormenta.array;
+
 public class Partida {
 
 
@@ -35,7 +34,7 @@ public Partida(array mapa) {
 public void crearJugador(String nombre, ClasePersonaje tipo) {
 	Jugador j = new Jugador(nombre, tipo.getVida(), tipo.getEscudo(), tipo.getVidaMax(), PoolArmas.armaPara(tipo), Jugador.obtenerObjetoAleatorio(), false );
 	 jugadores.add(j);
-	 
+	 	
 }
 
 
@@ -77,17 +76,14 @@ public void inicializarEquipos(List<List<Jugador>> todosLosEquipos) {
         equiposPorZona.put(i, new ArrayList<>());
         
     } 
-    int numZonas = 9;
     for (List<Jugador> equipo : todosLosEquipos) {
         if (!equipo.isEmpty()) {
-            int zonaAsignada = random.nextInt(numZonas) + 1;
+            int zonaAsignada = random.nextInt(9) + 1;
             equiposPorZona.get(zonaAsignada).add(equipo);
 
             // Mostrar en consola
             String nombres = "";
-            for (Jugador j : equipo) {
-                nombres += j.getNombre() + " ";
-            }
+            for (Jugador j : equipo) nombres += j.getNombre() + " ";
             System.out.println("Equipo (" + nombres.trim() + ") asignado a Zona " + zonaAsignada);
         }
     }
@@ -115,7 +111,7 @@ public void iniciarBatalla() {
 
 private int jugadoresTotales() {
     int total = 0;
-    for (List<Jugador> lista : equiposPorZona.values()) {
+    for (List<List<Jugador>> lista : equiposPorZona.values()) {
         total += lista.size();
     }
     return total;

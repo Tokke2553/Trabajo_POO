@@ -1,6 +1,6 @@
 package Objetos;
 
-public class Objetos {
+public abstract class Objetos implements Interfaz_Objetos{
 	
 	private String nombre;
 	private float vida;
