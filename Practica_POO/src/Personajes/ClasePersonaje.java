@@ -58,7 +58,7 @@ public abstract class ClasePersonaje {
     //Funcion que comprueba si el arma elegida está permitida
     protected boolean armaPermitida(Arma arma) {
     	
-    	//For que recorre el array de las armas
+    	//For magico que recorre el array de las armas
         for (Arma a : getArmas()) {
         	
             if (a.getClass().equals(arma.getClass())) {
