@@ -9,17 +9,16 @@ import java.util.List;
 public class SeleccionPersonaje {
 
     private JFrame ventana;
-    private int numJugadores = 0; 
-    // Referencia a la clase Jugador anidada
-    private List<Jugador> jugadores; 
-    private int jugadorActualIndex = 0; 
+    private int numJugadores = 0;
+    private int numeroBots = 0;
+    private List<Jugador> jugadores;
+    private int jugadorActualIndex = 0;
     private String dificultadSeleccionada;
 
-    // CAMBIO CLAVE: Clase Jugador ahora es PUBLIC STATIC
     public static class Jugador {
         String nombre;
         ClasePersonaje clase;
-        Arma arma; 
+        Arma arma;
 
         public Jugador(String nombre) {
             this.nombre = nombre;
@@ -27,15 +26,12 @@ public class SeleccionPersonaje {
 
         @Override
         public String toString() {
-        	String nombreArma= (arma != null) ? arma.getNombre() : "Sin arma";
-        	String nombreClase = (clase != null) ? clase.getPersonaje() : "Sin clase";
-        	return "Nombre: " + nombre + ", Personaje: " + nombreClase + ", Arma: " + nombreArma;
+            String nombreArma= (arma != null) ? arma.getNombre() : "Sin arma";
+            String nombreClase = (clase != null) ? clase.getPersonaje() : "Sin clase";
+            return "Nombre: " + nombre + ", Personaje: " + nombreClase + ", Arma: " + nombreArma;
         }
-        	}
+    }
 
-     
-        
-    
 
     public SeleccionPersonaje() {
         ventana = new JFrame("Selecciona tu personaje");
@@ -44,50 +40,72 @@ public class SeleccionPersonaje {
         ventana.setLocationRelativeTo(null);
         ventana.setResizable(false);
         ventana.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        
+
         jugadores = new ArrayList<>();
-        
-        configurarInterfaz(); 
-        
+
+        configurarInterfaz();
+
         mostrar();
-        
+
         iniciarProcesoDeSeleccion();
-        
+
         if (!jugadores.isEmpty()) {
-            mostrarInfoJugadorActual(); 
+            mostrarInfoJugadorActual();
         }
     }
-    
+
 
     private void iniciarProcesoDeSeleccion() {
-        if (preguntarDificultad()) {
-            if (preguntarModoJuego()) {
-                pedirNombresJugadores();
+        if (preguntarNumeroBots()) {
+            if (preguntarDificultad()) {
+                if (preguntarModoJuego()) {
+                    pedirNombresJugadores();
+                } else {
+                    ventana.dispose();
+                    System.exit(0);
+                }
             } else {
-                ventana.dispose(); 
+                ventana.dispose();
                 System.exit(0);
             }
         } else {
-            ventana.dispose(); 
+            ventana.dispose();
             System.exit(0);
         }
     }
-    
+
+    private boolean preguntarNumeroBots() {
+        String peticiondebots = JOptionPane.showInputDialog(ventana, "Introduce el número de bots (máximo 100):", "Selección de Bots", JOptionPane.QUESTION_MESSAGE);
+
+        if (peticiondebots == null) {
+            return false;
+        }
+
+        try {
+        	numeroBots = Integer.parseInt(peticiondebots.trim());
+            if (numeroBots >= 1 && numeroBots <= 100) {
+                
+                JOptionPane.showMessageDialog(ventana, "Jugarás contra " + numeroBots + " bots.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
+                return true;
+            } else {
+                JOptionPane.showMessageDialog(ventana, "Número de bots no válido. Debe ser entre 1 y 100.", "Error", JOptionPane.ERROR_MESSAGE);
+                return preguntarNumeroBots();
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(ventana, "Entrada no válida. Por favor, introduce un número.", "Error", JOptionPane.ERROR_MESSAGE);
+            return preguntarNumeroBots();
+        }
+    }
+
     private boolean preguntarDificultad() {
         String[] dificultades = {"Fácil", "Intermedio", "Difícil"};
         JComboBox<String> dificultadSelector = new JComboBox<>(dificultades);
-        
+
         JPanel panel = new JPanel();
         panel.add(new JLabel("Selecciona el nivel de dificultad:"));
         panel.add(dificultadSelector);
 
-        int resultado = JOptionPane.showConfirmDialog(
-            ventana, 
-            panel, 
-            "Selección de Dificultad", 
-            JOptionPane.OK_CANCEL_OPTION, 
-            JOptionPane.QUESTION_MESSAGE
-        );
+        int resultado = JOptionPane.showConfirmDialog(ventana, panel, "Selección de Dificultad", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 
         if (resultado == JOptionPane.OK_OPTION) {
             dificultadSeleccionada = (String) dificultadSelector.getSelectedItem();
@@ -101,34 +119,28 @@ public class SeleccionPersonaje {
     private boolean preguntarModoJuego() {
         String[] modos = {"Solo (1)", "Duo (2)", "Squad (4)"};
         JComboBox<String> modoSelector = new JComboBox<>(modos);
-        
+
         JPanel panel = new JPanel();
-        panel.add(new JLabel("Selecciona el modo de juego:"));
+        panel.add(new JLabel("Selecciona el modo de juego (Jugadores Humanos):"));
         panel.add(modoSelector);
 
-        int resultado = JOptionPane.showConfirmDialog(
-            ventana, 
-            panel, 
-            "Modo de Juego", 
-            JOptionPane.OK_CANCEL_OPTION, 
-            JOptionPane.QUESTION_MESSAGE
-        );
+        int resultado = JOptionPane.showConfirmDialog(ventana, panel, "Modo de Juego", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 
         if (resultado == JOptionPane.OK_OPTION) {
             int seleccion = modoSelector.getSelectedIndex();
-            
+
             switch (seleccion) {
-                case 0: 
+                case 0:
                     numJugadores = 1;
                     break;
-                case 1: 
+                case 1:
                     numJugadores = 2;
                     break;
-                case 2: 
+                case 2:
                     numJugadores = 4;
                     break;
                 default:
-                    return false; 
+                    return false;
             }
             return true;
         } else {
@@ -139,28 +151,23 @@ public class SeleccionPersonaje {
 
     private void pedirNombresJugadores() {
         for (int i = 0; i < numJugadores; i++) {
-            String nombre = JOptionPane.showInputDialog(
-                    ventana, 
-                    "Introduce el nombre del Jugador " + (i + 1) + ":",
-                    "Nombre de Jugador",
-                    JOptionPane.PLAIN_MESSAGE
-            );
-            
+            String nombre = JOptionPane.showInputDialog(ventana, "Introduce el nombre del Jugador " + (i + 1) + ":", "Nombre de Jugador", JOptionPane.PLAIN_MESSAGE);
+
             if (nombre == null || nombre.trim().isEmpty()) {
                 nombre = "Jugador " + (i + 1);
             }
-            
+
             jugadores.add(new Jugador(nombre));
         }
     }
-    
+
     private void mostrarInfoJugadorActual() {
-        ventana.setTitle("Selección de Personaje - Turno de: " + jugadores.get(jugadorActualIndex).nombre + " | Dificultad: " + dificultadSeleccionada);
+        ventana.setTitle("Selección de Personaje - Turno de: " + jugadores.get(jugadorActualIndex).nombre + " | Dificultad: " + dificultadSeleccionada + " | Bots: " + numeroBots);
     }
-    
+
     private void personajeSeleccionado(ClasePersonaje clase) {
         jugadores.get(jugadorActualIndex).clase = clase;
-        
+
         JOptionPane.showMessageDialog(ventana, jugadores.get(jugadorActualIndex).nombre + " ha seleccionado a: " + clase.getPersonaje());
 
         jugadorActualIndex++;
@@ -174,17 +181,16 @@ public class SeleccionPersonaje {
 
     private void finalizarSeleccion() {
         ventana.setVisible(false);
-        ventana.dispose(); 
-        
-        // Llama a la nueva interfaz de selección de armas
+        ventana.dispose();
+
         new SeleccionArmas(jugadores, dificultadSeleccionada);
     }
-    
+
     private void configurarInterfaz() {
-        
+
         JPanel panelFondo = new JPanel() {
             private final ImageIcon fondo = new ImageIcon(
-                    SeleccionPersonaje.class.getResource("fondo.jpg")
+                SeleccionPersonaje.class.getResource("fondo.jpg")
             );
 
             @Override
@@ -195,21 +201,21 @@ public class SeleccionPersonaje {
         };
         panelFondo.setLayout(new BorderLayout());
         ventana.setContentPane(panelFondo);
-        
-        JPanel panelPrincipal = new JPanel(new GridLayout(1, 3, 50, 0)); 
+
+        JPanel panelPrincipal = new JPanel(new GridLayout(1, 3, 50, 0));
         panelPrincipal.setOpaque(false);
-        panelPrincipal.setBorder(BorderFactory.createEmptyBorder(50, 50, 50, 50)); 
+        panelPrincipal.setBorder(BorderFactory.createEmptyBorder(50, 50, 50, 50));
 
         JPanel panelColumna1 = new JPanel(new BorderLayout(0, 10));
         panelColumna1.setOpaque(false);
-        
+
         ImageIcon img1 = new ImageIcon(SeleccionPersonaje.class.getResource("personaje2.jpg"));
         Image escala1 = img1.getImage().getScaledInstance(250, 400, Image.SCALE_SMOOTH);
         JButton boton1 = new JButton(new ImageIcon(escala1));
         boton1.setBorderPainted(false);
         boton1.setContentAreaFilled(false);
         boton1.setFocusPainted(false);
-        boton1.addActionListener(e -> personajeSeleccionado(new Enano())); 
+        boton1.addActionListener(e -> personajeSeleccionado(new Enano()));
 
         JButton btnCaract1 = new JButton("CARACTERISTICAS ENANO");
         btnCaract1.setPreferredSize(new Dimension(150, 75));
@@ -217,10 +223,10 @@ public class SeleccionPersonaje {
         btnCaract1.addActionListener(e -> {
             JOptionPane.showMessageDialog(ventana, "ENANO:\n \n- Vida: 75HP\n- Escudo: 100SP\n- Multiplicador daño: 0.9X\n- Multiplicador precisión: 1.3X\n \n - ARMAS: Francotirador, Patito de goma, Subfusil");
         });
-        
+
         panelColumna1.add(boton1, BorderLayout.CENTER);
         panelColumna1.add(btnCaract1, BorderLayout.SOUTH);
-        
+
         JPanel panelColumna2 = new JPanel(new BorderLayout(0, 10));
         panelColumna2.setOpaque(false);
 
@@ -259,7 +265,7 @@ public class SeleccionPersonaje {
         btnCaract3.addActionListener(e -> {
             JOptionPane.showMessageDialog(ventana, "GIGANTE:\n \n- Vida: 200HP\n- Escudo: 50SP\n- Multiplicador daño: 1.2X\n- Multiplicador precisión: 0.65X\n \n - ARMAS: Machete, Lanzacohetes, Fusil");
         });
-        
+
         panelColumna3.add(boton3, BorderLayout.CENTER);
         panelColumna3.add(btnCaract3, BorderLayout.SOUTH);
 
@@ -273,5 +279,9 @@ public class SeleccionPersonaje {
 
     public void mostrar() {
         ventana.setVisible(true);
+    }
+
+    public int getNumeroBots() {
+        return numeroBots;
     }
 }
