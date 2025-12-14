@@ -15,10 +15,12 @@ public class MapaGUI extends JPanel {
     private final int TAMAÑO_TOTAL = 3 * TAMAÑO_CELDA;
     
     
+    
     private Image imagenFondo; 
 
     //
     public MapaGUI(array mapa) {
+    	
         this.mapaObjeto = mapa;
         this.setPreferredSize(new Dimension(TAMAÑO_TOTAL, TAMAÑO_TOTAL));
 
