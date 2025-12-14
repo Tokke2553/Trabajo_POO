@@ -111,7 +111,7 @@ public class SeleccionArmas {
         ventanaArmas.setVisible(false);
         ventanaArmas.dispose();
         
-        StringBuilder resumen = new StringBuilder("Partida iniciandose...");
+        StringBuilder resumen = new StringBuilder("Partida iniciandose...\n");
         resumen.append("Dificultad del juego: ").append(dificultad).append("\n");
         resumen.append(" Resumen del Equipo \n");
         
