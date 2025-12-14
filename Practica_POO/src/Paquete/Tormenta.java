@@ -3,9 +3,9 @@ import Tormenta.*;
 
 public class Tormenta {
 	//adquirimos e mapa
-    private array mapa; 
+    private ArrayMapa mapa; 
 
-    public Tormenta(array mapa) {
+    public Tormenta(ArrayMapa mapa) {
         this.mapa = mapa;
     }
     //ejecutamos tormenta

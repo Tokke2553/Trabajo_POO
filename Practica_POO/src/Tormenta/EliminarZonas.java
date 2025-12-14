@@ -6,14 +6,14 @@ public class EliminarZonas {
 	//Random
 	Random random = new Random();
 	//array de tormenta
-	private array targetArray;
+	private ArrayMapa targetArray;
 	//lectura
 	Lectura leer = new Lectura();
 	//valores de Comparacion
 	int comp1;
 	int comp2;
 	//recibir array
-	public EliminarZonas(array arrayAModificar) {
+	public EliminarZonas(ArrayMapa arrayAModificar) {
         this.targetArray = arrayAModificar;
     }
 		//modificación de etormenta
