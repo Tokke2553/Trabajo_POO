@@ -10,7 +10,7 @@ import java.io.File;
 
 public class MapaGUI extends JPanel {
 
-    private array mapaObjeto; 
+    private ArrayMapa mapaObjeto; 
     private final int TAMAÑO_CELDA = 200;
     private final int TAMAÑO_TOTAL = 3 * TAMAÑO_CELDA;
     
@@ -19,7 +19,7 @@ public class MapaGUI extends JPanel {
     private Image imagenFondo; 
 
     //
-    public MapaGUI(array mapa) {
+    public MapaGUI(ArrayMapa mapa) {
     	
         this.mapaObjeto = mapa;
         this.setPreferredSize(new Dimension(TAMAÑO_TOTAL, TAMAÑO_TOTAL));
