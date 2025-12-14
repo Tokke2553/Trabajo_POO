@@ -13,13 +13,19 @@ private Map<Integer, List<List<Jugador>>> equiposPorZona = new HashMap<>();
 private Random random = new Random();
 private ArrayMapa mapa;
 private EliminarZonas tormenta;
+private String dificultadPartida;
+private Multiplicador multiplicador;
 
 
-
-public Partida(ArrayMapa mapa) {
+public Partida(ArrayMapa mapa,String dificultad) {
     this.mapa = mapa;
     this.tormenta = new EliminarZonas(mapa);
-
+    
+    //Inicializar dificultad
+    this.dificultadPartida = dificultad;
+    this.multiplicador= new Multiplicador(dificultad);
+    System.out.println("Partida creada en dificultad: " + dificultad.toUpperCase());
+    // ----------------------------------
     // Inicializar zonas
     for (int i = 1; i <= 9; i++) {
         equiposPorZona.put(i, new ArrayList<>());
@@ -32,7 +38,9 @@ public Partida(ArrayMapa mapa) {
 
 
 public void crearJugador(String nombre, ClasePersonaje tipo) {
+	
 	Jugador j = new Jugador(nombre, tipo, PoolArmas.armaPara(tipo), Jugador.obtenerObjetoAleatorio(), false );
+	
 	 jugadores.add(j);
 	 	
 }
@@ -45,8 +53,10 @@ public void crearBots(int cantidad) {
 		ClasePersonaje tipo = ClasePersonaje.obtenerClases()[random.nextInt(3)];
 
 
-
+		float factorDificultad = this.multiplicador.getMultiplicador();
+		System.out.println("Creando " + cantidad + " bots. Multiplicador de daño del bot: x" + factorDificultad);
          Jugador bot = new Jugador("Bot_" + (i + 1), tipo,PoolArmas.armaPara(tipo),Jugador.obtenerObjetoAleatorio(),true);
+         bot.setDificultadAtaque(factorDificultad);
          jugadores.add(bot);
      }
 }

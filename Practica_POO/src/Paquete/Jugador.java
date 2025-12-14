@@ -16,6 +16,7 @@ public class Jugador {
 	    private Arma arma;
 	    public Objetos objeto;
 	    private boolean bot;
+	    private float DificultadAtaque = 1.0f;
 	    ClasePersonaje clase;
 	    
 	    
@@ -63,6 +64,7 @@ public class Jugador {
 	    		vida = 100;
 	    	}
 	    }
+	    
 	    public void implementacionEscudo (float cantidad) {
 	    	escudo += cantidad;
 	    	if (escudo > 100) {
@@ -87,7 +89,7 @@ public class Jugador {
 	    	}
 	    
 	    
-	  
+	  //Gestionar daño
 	    public void recibirDanio(float danio) {
 	        this.vida -= danio;
 
@@ -98,16 +100,35 @@ public class Jugador {
 	        System.out.println(nombre + " ha recibido " + danio + " de daño. Vida restante: " + vida);
 	    }
 	    
+	    //Depentiendo de la dificultad el bot causa mas o menos daño
+	    public void setDificultadAtaque(float factor) {
+            if (this.isBot()) { 
+                this.DificultadAtaque = factor;
+                System.out.println("  -> Bot " + this.nombre + ": Factor de daño por dificultad establecido a x" + factor);
+            }
+        }
+	    
+	    
 	    public void atacar(Jugador enemigo) {
 
-	        float danio = arma.calcularDanio();
-	        float danioRestante = danio - enemigo.escudo;
+	        float danioArma = arma.calcularDanio(); //Daño base de las armas
+	        float danioConMultiplicadores = danioArma * this.multiplicadorDaño; // Daño base arma +  multiplicador daño del objeto
+	        float danioFinal; 
+            if (this.isBot()) {
+                danioFinal = danioConMultiplicadores * this.DificultadAtaque; //Daño dependiento del la dificultad, solo para bot
+            } else {
+                danioFinal = danioConMultiplicadores; // Los jugadores no afectan
+            }
+            
+            
+            //Aplicar escudo antes que la vida
+	        float danioRestante = danioFinal - enemigo.escudo;
 	       if (danioRestante > 0) {
 	    	   enemigo.vida -= danioRestante;
 	    	   enemigo.escudo = 0;
 	    	  
 	       }else {
-	    	   enemigo.escudo -= danio; 
+	    	   enemigo.escudo -= danioFinal; 
 	    	      
 	       }
 	        
@@ -115,7 +136,7 @@ public class Jugador {
 	    	   enemigo.vida = 0;   
 	       }
 
-	        System.out.println(nombre + " ataca a " + enemigo.nombre + " con " + arma.getNombre() + " causando " + danio + " de daño");
+	        System.out.println(nombre + " ataca a " + enemigo.nombre + " con " + arma.getNombre() + " causando " + danioFinal + " de daño");
 	    }
 	   
 	    
