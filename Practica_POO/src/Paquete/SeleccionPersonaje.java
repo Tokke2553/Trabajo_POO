@@ -19,7 +19,7 @@ public class SeleccionPersonaje {
     public static class Jugador {
         String nombre;
         ClasePersonaje clase;
-        Arma arma; // Campo añadido
+        Arma arma; 
 
         public Jugador(String nombre) {
             this.nombre = nombre;
@@ -27,10 +27,15 @@ public class SeleccionPersonaje {
 
         @Override
         public String toString() {
-            // toString modificado para incluir el arma
-            return "Nombre: " + nombre + ", Personaje: " + clase.getPersonaje() + ", Arma: " + clase.getArma();
+        	String nombreArma= (arma != null) ? arma.getNombre() : "Sin arma";
+        	String nombreClase = (clase != null) ? clase.getPersonaje() : "Sin clase";
+        	return "Nombre: " + nombre + ", Personaje: " + nombreClase + ", Arma: " + nombreArma;
         }
-    }
+        	}
+
+     
+        
+    
 
     public SeleccionPersonaje() {
         ventana = new JFrame("Selecciona tu personaje");
