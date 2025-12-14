@@ -1,5 +1,6 @@
 package Paquete;
-
+import Personajes.*;
+import Armas.*;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -17,8 +18,8 @@ public class SeleccionPersonaje {
     // CAMBIO CLAVE: Clase Jugador ahora es PUBLIC STATIC
     public static class Jugador {
         String nombre;
-        String personaje;
-        String arma; // Campo añadido
+        ClasePersonaje clase;
+        Arma arma; 
 
         public Jugador(String nombre) {
             this.nombre = nombre;
@@ -26,10 +27,15 @@ public class SeleccionPersonaje {
 
         @Override
         public String toString() {
-            // toString modificado para incluir el arma
-            return "Nombre: " + nombre + ", Personaje: " + personaje + ", Arma: " + arma;
+        	String nombreArma= (arma != null) ? arma.getNombre() : "Sin arma";
+        	String nombreClase = (clase != null) ? clase.getPersonaje() : "Sin clase";
+        	return "Nombre: " + nombre + ", Personaje: " + nombreClase + ", Arma: " + nombreArma;
         }
-    }
+        	}
+
+     
+        
+    
 
     public SeleccionPersonaje() {
         ventana = new JFrame("Selecciona tu personaje");
@@ -152,10 +158,10 @@ public class SeleccionPersonaje {
         ventana.setTitle("Selección de Personaje - Turno de: " + jugadores.get(jugadorActualIndex).nombre + " | Dificultad: " + dificultadSeleccionada);
     }
     
-    private void personajeSeleccionado(String personaje) {
-        jugadores.get(jugadorActualIndex).personaje = personaje;
+    private void personajeSeleccionado(ClasePersonaje clase) {
+        jugadores.get(jugadorActualIndex).clase = clase;
         
-        JOptionPane.showMessageDialog(ventana, jugadores.get(jugadorActualIndex).nombre + " ha seleccionado a: " + personaje);
+        JOptionPane.showMessageDialog(ventana, jugadores.get(jugadorActualIndex).nombre + " ha seleccionado a: " + clase.getPersonaje());
 
         jugadorActualIndex++;
 
@@ -203,7 +209,7 @@ public class SeleccionPersonaje {
         boton1.setBorderPainted(false);
         boton1.setContentAreaFilled(false);
         boton1.setFocusPainted(false);
-        boton1.addActionListener(e -> personajeSeleccionado("ENANO")); 
+        boton1.addActionListener(e -> personajeSeleccionado(new Enano())); 
 
         JButton btnCaract1 = new JButton("CARACTERISTICAS ENANO");
         btnCaract1.setPreferredSize(new Dimension(150, 75));
@@ -224,7 +230,7 @@ public class SeleccionPersonaje {
         boton2.setBorderPainted(false);
         boton2.setContentAreaFilled(false);
         boton2.setFocusPainted(false);
-        boton2.addActionListener(e -> personajeSeleccionado("NORMAL"));
+        boton2.addActionListener(e -> personajeSeleccionado(new Normal()));
 
         JButton btnCaract2 = new JButton("CARACTERISTICAS NORMAL");
         btnCaract2.setPreferredSize(new Dimension(150, 75));
@@ -245,7 +251,7 @@ public class SeleccionPersonaje {
         boton3.setBorderPainted(false);
         boton3.setContentAreaFilled(false);
         boton3.setFocusPainted(false);
-        boton3.addActionListener(e -> personajeSeleccionado("GIGANTE"));
+        boton3.addActionListener(e -> personajeSeleccionado(new Gigante()));
 
         JButton btnCaract3 = new JButton("CARACTERISTICAS GIGANTE");
         btnCaract3.setPreferredSize(new Dimension(150, 75));

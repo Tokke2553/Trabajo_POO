@@ -2,133 +2,198 @@ package Paquete;
 
 import javax.swing.*;
 import Tormenta.*;
-
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
+import java.util.Random;
 
-// Importación adicional necesaria para usar rutas de archivo más robustas si fuera necesario
-import java.io.File; 
+public class MapaGUI {
 
-public class MapaGUI extends JPanel {
-
-    private array mapaObjeto; 
-    private final int TAMAÑO_CELDA = 200;
-    private final int TAMAÑO_TOTAL = 3 * TAMAÑO_CELDA;
+    private JFrame ventana;
+    private ArrayMapa mapaData;
+    private Image imagenFondo;
+    private LienzoMapa lienzo;
+    private JButton btnRonda;
     
-    
-    
-    private Image imagenFondo; 
+    // --- VARIABLES DE ESTADO ---
+    private int zonaJugadorHumano = -1; // Almacena la zona (1-9) del jugador
+    private boolean esperandoViaje = false; // Bloquea el botón hasta que el humano elija zona
+    private Random random = new Random();
 
-    //
-    public MapaGUI(array mapa) {
-    	
-        this.mapaObjeto = mapa;
-        this.setPreferredSize(new Dimension(TAMAÑO_TOTAL, TAMAÑO_TOTAL));
+    private static final String[] CIUDADES = {
+        "", "VIKING FIORD", "QUARRY PEAK", "TEMPLE FALLS", 
+        "BUBBLE BOG", "METRO MELTDOWN", "SHROOM SHORES", 
+        "DUSTY DERELICT", "GATOR GLADE", "LAVA LOCKDOWN"
+    };
 
-        // --- CARGA DE LA IMAGEN CON LA RUTA ABSOLUTA ---
+    public MapaGUI(ArrayMapa mapa) {
+        this.mapaData = mapa;
+        cargarImagen();
+        configurarVentana();
+    }
+
+    private void cargarImagen() {
         try {
-            // Usamos la ruta absoluta proporcionada por el usuario.
-            // Creamos un objeto File para asegurarnos de que el path sea válido para el sistema operativo.
-            File imageFile = new File("mapaF.jpg");
-            
-            // Verificación: Asegúrate de que el archivo exista antes de intentar cargarlo
-            if (imageFile.exists()) {
-                 // Creamos un ImageIcon a partir de la ruta del archivo y obtenemos el objeto Image
-                 imagenFondo = new ImageIcon(imageFile.getAbsolutePath()).getImage();
-            } else {
-                 System.err.println("Error: Archivo de imagen no encontrado en la ruta especificada: " + imageFile.getAbsolutePath());
-                 imagenFondo = null;
+            File file = new File("mapaF.jpg");
+            if (file.exists()) {
+                imagenFondo = new ImageIcon(file.getAbsolutePath()).getImage();
             }
-
         } catch (Exception e) {
-            System.err.println("Error al cargar la imagen de fondo: " + e.getMessage());
-            imagenFondo = null; 
+            e.printStackTrace();
         }
     }
 
-    // Método principal de dibujo (se llama automáticamente)
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
+    private void configurarVentana() {
+        ventana = new JFrame("Battle Royale Island - Mapa");
+        ventana.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ventana.setLayout(new BorderLayout());
+
+        lienzo = new LienzoMapa();
         
-        int[][] mapa = mapaObjeto.array;
+        // --- DETECCIÓN DE CLIC PARA VIAJAR ---
+        lienzo.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (esperandoViaje) {
+                    procesarClickViaje(e.getX(), e.getY());
+                }
+            }
+        });
+
+        ventana.add(lienzo, BorderLayout.CENTER);
+
+        btnRonda = new JButton("SIGUIENTE RONDA (TORMENTA)");
+        btnRonda.setFont(new Font("Arial", Font.BOLD, 20));
+        btnRonda.setBackground(Color.YELLOW);
+        btnRonda.setPreferredSize(new Dimension(0, 60));
         
-        // 1. DIBUJAR LA IMAGEN DE FONDO
-        if (imagenFondo != null) {
-            // Dibuja la imagen cubriendo todo el panel (300x300)
-            g.drawImage(imagenFondo, 0, 0, TAMAÑO_TOTAL, TAMAÑO_TOTAL, this);
-        } else {
-            // Dibujar un color de fondo si la imagen falla
-            g.setColor(Color.LIGHT_GRAY);
-            g.fillRect(0, 0, TAMAÑO_TOTAL, TAMAÑO_TOTAL);
+        btnRonda.addActionListener(e -> ejecutarLogicaRonda());
+
+        ventana.add(btnRonda, BorderLayout.SOUTH);
+    }
+
+    private void ejecutarLogicaRonda() {
+        // 1. Ejecutar Tormenta
+        Tormenta tormenta = new Tormenta(mapaData);
+        tormenta.ejecutarRondaDeTormenta();
+        
+        // 2. Cambiar fase: Ahora el humano DEBE elegir zona
+        esperandoViaje = true;
+        btnRonda.setEnabled(false);
+        btnRonda.setText("HAZ CLICK EN UNA ZONA PARA VIAJAR");
+        actualizar();
+    }
+
+    private void procesarClickViaje(int mouseX, int mouseY) {
+        int w = lienzo.getWidth();
+        int h = lienzo.getHeight();
+
+        // Proporciones dinámicas
+        double propExt = 0.358;
+        double propCent = 0.284;
+
+        int[] xLimits = {0, (int)(w * propExt), (int)(w * (propExt + propCent)), w};
+        int[] yLimits = {0, (int)(h * propExt), (int)(h * (propExt + propCent)), h};
+
+        // Identificar Fila (i) y Columna (j)
+        int col = -1, fila = -1;
+        for (int i = 0; i < 3; i++) {
+            if (mouseX >= xLimits[i] && mouseX < xLimits[i+1]) col = i;
+            if (mouseY >= yLimits[i] && mouseY < yLimits[i+1]) fila = i;
         }
 
-        // 2. DIBUJAR LA DESTRUCCIÓN Y LA REJILLA ENCIMA DE LA IMAGEN
-        for (int i = 0; i < 3; i++) { // Filas
-            for (int j = 0; j < 3; j++) { // Columnas
-                
-                int x = j * TAMAÑO_CELDA;
-                int y = i * TAMAÑO_CELDA;
-                
-                if (mapa[i][j] == 10) {
-                    // Si está destruida, superponer un color semi-transparente
-                    // para mostrar la destrucción pero aún ver la imagen de fondo.
-                    
-                    // Color Rojo semi-transparente (150 de 255 es la opacidad)
-                    Color colorDestruccion = new Color(150, 0, 0, 150); 
-                    g.setColor(colorDestruccion);
-                    g.fillRect(x, y, TAMAÑO_CELDA, TAMAÑO_CELDA);
-                    
-                    // Dibujar texto de destrucción
-                    g.setColor(Color.WHITE);
-                    g.setFont(new Font("Arial", Font.BOLD, 16));
-                    g.drawString("DESTRUIDA", x + 15, y + 55);
-                    
-                } else {
-                    // Opcional: Dibujar el valor de la ciudad (para debug)
-                    g.setColor(Color.YELLOW);
-                    g.setFont(new Font("Arial", Font.BOLD, 18));
-                    String valor = String.valueOf(mapa[i][j]);
-                    int valor2 =mapa[i][j];
-                    if(valor2 == 1) {
-                    	g.drawString("VIKING FIDRF", x + 20, y + 20);
-                    }
-                    if(valor2 == 2) {
-                    	g.drawString("QUARRY PEAK ", x + 20, y + 20);
-                    }
-                    if(valor2 == 3) {
-                    	g.drawString("TEMPEL FALSS ", x + 20, y + 20);
-                    }
-                    if(valor2 == 4) {
-                    	g.drawString("BUBBLE BOG ", x + 20, y + 20);
-                    }
-                    if(valor2 == 5) {
-                    	g.drawString("METRO MELLDOWN ", x + 20, y + 20);
-                    }
-                    if(valor2 == 6) {
-                    	g.drawString("SHROOM SHORES ", x + 20, y + 20);
-                    }
-                    if(valor2 == 7) {
-                    	g.drawString("DUSTY DERELIC ", x + 20, y + 20);
-                    }
-                    if(valor2 == 8) {
-                    	g.drawString("GATOR GLADE ", x + 20, y + 20);
-                    }
-                    if(valor2 == 9) {
-                    	g.drawString("LAVA LOCKDOWN ", x + 20, y + 20);
+        if (fila != -1 && col != -1) {
+            // Verificar si la zona está destruida
+            if (mapaData.array[fila][col] == 10) {
+                JOptionPane.showMessageDialog(ventana, "¡Esa zona está destruida! Elige otra.");
+                return;
+            }
+
+            // --- VIAJE DEL HUMANO ---
+            this.zonaJugadorHumano = (fila * 3) + col + 1;
+            System.out.println("Jugador Humano viaja a Zona: " + zonaJugadorHumano + " (" + CIUDADES[zonaJugadorHumano] + ")");
+
+            // --- VIAJE DE LOS BOTS (Automático) ---
+            // Aquí llamarías a la lógica de tu clase Partida para mover a todos los bot = true
+            viajarBotsAleatoriamente();
+
+            // Finalizar fase de viaje
+            esperandoViaje = false;
+            btnRonda.setEnabled(true);
+            btnRonda.setText("SIGUIENTE RONDA (TORMENTA)");
+            actualizar();
+        }
+    }
+
+    private void viajarBotsAleatoriamente() {
+        // Lógica para elegir zonas no destruidas para los bots
+        System.out.println("Bots moviéndose a zonas aleatorias seguras...");
+        // En tu clase Partida, iterarías la lista de jugadores:
+        // si bot == true -> nuevo_destino = random entre zonas != 10
+    }
+
+    public void mostrar() {
+        ventana.setVisible(true);
+    }
+
+    public void actualizar() {
+        lienzo.repaint();
+    }
+
+    private class LienzoMapa extends JPanel {
+        private final double PROP_EXTERNA = 0.358;
+        private final double PROP_CENTRAL = 0.284;
+
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            Graphics2D g2 = (Graphics2D) g;
+            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+            int w = getWidth();
+            int h = getHeight();
+
+            if (imagenFondo != null) g2.drawImage(imagenFondo, 0, 0, w, h, this);
+
+            int[] xCoords = {0, (int)(w * PROP_EXTERNA), (int)(w * (PROP_EXTERNA + PROP_CENTRAL)), w};
+            int[] yCoords = {0, (int)(h * PROP_EXTERNA), (int)(h * (PROP_EXTERNA + PROP_CENTRAL)), h};
+
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    int x = xCoords[j];
+                    int y = yCoords[i];
+                    int cellW = xCoords[j+1] - x;
+                    int cellH = yCoords[i+1] - y;
+                    int idZona = (i * 3) + j + 1;
+
+                    // Dibujar Rejilla
+                    g2.setColor(new Color(0, 0, 0, 80));
+                    g2.drawRect(x, y, cellW, cellH);
+
+                    if (mapaData.array[i][j] == 10) {
+                        g2.setColor(new Color(255, 0, 0, 120));
+                        g2.fillRect(x, y, cellW, cellH);
+                        g2.setColor(Color.WHITE);
+                        g2.setFont(new Font("Arial", Font.BOLD, (int)(cellH * 0.1)));
+                        g2.drawString("DESTRUIDA", x + (cellW/4), y + (cellH/2));
+                    } else {
+                        // Dibujar Nombres
+                        g2.setColor(Color.YELLOW);
+                        g2.setFont(new Font("Arial", Font.BOLD, (int)(cellH * 0.08)));
+                        g2.drawString(CIUDADES[idZona], x + 15, y + (int)(cellH * 0.15));
+                        
+                        // --- MARCADOR DEL JUGADOR ---
+                        if (idZona == zonaJugadorHumano) {
+                            g2.setColor(Color.CYAN);
+                            g2.setStroke(new BasicStroke(5));
+                            g2.drawOval(x + cellW/2 - 20, y + cellH/2 - 20, 40, 40);
+                            g2.drawString("TU", x + cellW/2 - 10, y + cellH/2 + 40);
+                        }
                     }
                 }
-
-                // Dibujar la REJILLA (Líneas divisorias)
-                g.setColor(Color.BLACK);
-                g.drawRect(x, y, TAMAÑO_CELDA, TAMAÑO_CELDA);
             }
         }
-    }
-    
-    /**
-     * Llama a paintComponent para redibujar la matriz.
-     */
-    public void actualizarMapa() {
-        this.repaint();
     }
 }
