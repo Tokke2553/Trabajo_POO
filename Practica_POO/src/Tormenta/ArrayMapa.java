@@ -1,9 +1,7 @@
 package Tormenta;
 
-
-
-public class array {
-		
+public class ArrayMapa {
+	
 	public int[][] array= new int[3][3];
 	private int valor=1;
 	
@@ -38,4 +36,3 @@ public class array {
 	}
 	
 }
-

@@ -11,12 +11,12 @@ public class Partida {
 private List<Jugador> jugadores = new ArrayList<>();
 private Map<Integer, List<List<Jugador>>> equiposPorZona = new HashMap<>();
 private Random random = new Random();
-private array mapa;
+private ArrayMapa mapa;
 private EliminarZonas tormenta;
 
 
 
-public Partida(array mapa) {
+public Partida(ArrayMapa mapa) {
     this.mapa = mapa;
     this.tormenta = new EliminarZonas(mapa);
 
