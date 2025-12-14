@@ -26,6 +26,10 @@ public class MapaGUI {
         configurarVentana();
     }
 
+    private ArrayMapa mapaObjeto; 
+    private final int TAMAÑO_CELDA = 200;
+    private final int TAMAÑO_TOTAL = 3 * TAMAÑO_CELDA;
+    
     private void cargarImagen() {
         try {
             File file = new File("mapaF.jpg");

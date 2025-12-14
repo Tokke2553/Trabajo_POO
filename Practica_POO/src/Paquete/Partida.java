@@ -32,7 +32,7 @@ public Partida(ArrayMapa mapa) {
 
 
 public void crearJugador(String nombre, ClasePersonaje tipo) {
-	Jugador j = new Jugador(nombre, tipo.getVida(), tipo.getEscudo(), tipo.getVidaMax(), PoolArmas.armaPara(tipo), Jugador.obtenerObjetoAleatorio(), false );
+	Jugador j = new Jugador(nombre, tipo, PoolArmas.armaPara(tipo), Jugador.obtenerObjetoAleatorio(), false );
 	 jugadores.add(j);
 	 	
 }
@@ -46,7 +46,7 @@ public void crearBots(int cantidad) {
 
 
 
-         Jugador bot = new Jugador("Bot_" + (i + 1), tipo.getVida(),tipo.getEscudo(),tipo.getVidaMax(),PoolArmas.armaPara(tipo),Jugador.obtenerObjetoAleatorio(),true);
+         Jugador bot = new Jugador("Bot_" + (i + 1), tipo,PoolArmas.armaPara(tipo),Jugador.obtenerObjetoAleatorio(),true);
          jugadores.add(bot);
      }
 }
