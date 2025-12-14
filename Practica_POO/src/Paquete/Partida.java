@@ -7,8 +7,6 @@ import javax.swing.JOptionPane;
 import Personajes.*;
 
 public class Partida {
-
-
 private List<Jugador> jugadores = new ArrayList<>();
 private Map<Integer, List<List<Jugador>>> equiposPorZona = new HashMap<>();
 private Random random = new Random();
