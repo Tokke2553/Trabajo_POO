@@ -189,9 +189,7 @@ public class SeleccionPersonaje {
     private void configurarInterfaz() {
 
         JPanel panelFondo = new JPanel() {
-            private final ImageIcon fondo = new ImageIcon(
-                SeleccionPersonaje.class.getResource("fondo.jpg")
-            );
+            private final ImageIcon fondo = new ImageIcon(SeleccionPersonaje.class.getResource("fondo.jpg"));
 
             @Override
             protected void paintComponent(Graphics g) {

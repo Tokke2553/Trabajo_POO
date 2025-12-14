@@ -60,6 +60,7 @@ public class Jugador {
 	    
 	    public void curar(float cantidad) {
 	    	vida += cantidad;
+	    	System.out.println(this.nombre + "se ha curado");
 	    	if (vida > vidaMax) {
 	    		vida = 100;
 	    	}
@@ -67,25 +68,30 @@ public class Jugador {
 	    
 	    public void implementacionEscudo (float cantidad) {
 	    	escudo += cantidad;
+	    	System.out.println(this.nombre + "ha usado una pocion de escudo");
 	    	if (escudo > 100) {
 	    		this.escudo = 100;
 	    	}
 	    }
 	    
 	    public void mejorarDaño(float multiplicador) { 
-	    	multiplicadorDaño *= multiplicador; 
+	    	multiplicadorDaño *= multiplicador;
+	    	System.out.println(this.nombre + "ha usado una mejora de daño");
 	    	}
 	    
 	    public void mejorarPrecision(float multiplicador) { 
 	    	multiplicadorPrecision *= multiplicador; 
+	    	System.out.println(this.nombre + "ha usado una mejora de precision");
 	    	}
 	    
 	    public void mejorarCargador(float multiplicador) { 
-	    	tamCargador = (int)(tamCargador * multiplicador); 
+	    	tamCargador = (int)(tamCargador * multiplicador);
+	    	System.out.println(this.nombre + "ha usado una mejora de cargador");
 	    	}
 	    
 	    public void mejorarDistancia(float multiplicador) { 
 	    	multiplicadorDistancia *= multiplicador; 
+	    	System.out.println(this.nombre + "ha usado una mejora de distancia");
 	    	}
 	    
 	    
@@ -108,6 +114,17 @@ public class Jugador {
             }
         }
 	    
+	    public void usarObjeto() {
+	        if (this.objeto != null) {
+	            
+	            System.out.println(this.nombre + " ha usado " + this.objeto.getNombre() + ".");
+	            this.objeto.usar(this); 
+	            this.objeto = null; 
+	            System.out.println(this.nombre + " ya no tiene objeto equipado.");
+	        } else {
+	            System.out.println(this.nombre + " no tiene ningún objeto para usar.");
+	        }
+	    }
 	    
 	    public void atacar(Jugador enemigo) {
 
