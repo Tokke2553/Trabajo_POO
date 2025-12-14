@@ -6,6 +6,6 @@ public class MejoraCargador extends Objetos implements Interfaz_Objetos{
 		super("Mejora Cargador",0,0,0,0,1.7f,0);
 	}
 public void usar(Jugador Jugador) {
-		
+		Jugador.mejorarCargador(getMejora_cargador());
 	}
 }

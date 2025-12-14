@@ -1,7 +1,7 @@
 package Paquete;
 import Armas.*;
 import Objetos.*;
-
+import Personajes.*;
 import java.util.Random;
 public class Jugador {
 	
@@ -9,19 +9,29 @@ public class Jugador {
 	    private float vida;
 	    private float vidaMax;
 	    private float escudo;
+	    private float multiplicadorDaño;
+	    private float multiplicadorDistancia;
+	    private float multiplicadorPrecision;
+	    private float tamCargador;
 	    private Arma arma;
 	    private Objetos objeto;
 	    private boolean bot;
-	    public Jugador(String nombre, float vida,float vidaMax, float escudo ,Arma arma, Objetos objeto ,boolean bot) {
+	    ClasePersonaje clase;
+	    
+	    
+	    public Jugador(String nombre, ClasePersonaje clase, Arma arma, Objetos objeto, boolean bot) {
 	        this.nombre = nombre;
-	        this.vida = vida;
-	        this.vidaMax = vidaMax;
-	        this.escudo = escudo;
+	        this.clase = clase;
+	        this.vidaMax = clase.getVidaMax();
+	        this.vida = this.getVidaMax();
+	        this.escudo = clase.getEscudo();
+	        this.multiplicadorDaño = clase.getMultiDST();
+	        this.multiplicadorDistancia = clase.getMultiDMG();
+	        this.multiplicadorPrecision = clase.getMultiPRS();
+	        this.tamCargador = clase.getTamCargador();
 	        this.arma = arma;
 	        this.objeto = objeto;
 	        this.bot = bot;
-	        
-	        
 	    }
 	    private static final Objetos[] Pool_Objetos = {
 	    	new Curas(),
@@ -48,33 +58,36 @@ public class Jugador {
 	    
 	    
 	    public void curar(float cantidad) {
-	    	this.vida += cantidad;
-	    	if (vida > 100) {
-	    		this.vida = 100;
+	    	vida += cantidad;
+	    	if (vida > vidaMax) {
+	    		vida = 100;
 	    	}
 	    }
 	    public void implementacionEscudo (float cantidad) {
-	    	this.escudo += cantidad;
+	    	escudo += cantidad;
 	    	if (escudo > 100) {
 	    		this.escudo = 100;
 	    	}
 	    }
 	    
-	    public boolean estadoJugador(){
-	    	return vida > 0;
-	    	
-	    } 
-	    public float getVida() {
-	        return vida;
-	    }
-	    public float getEscudo() {
-	    	return escudo;
-	    	
-	    }
-	    public String getNombre() {
-	        return nombre;
-	    }
-
+	    public void mejorarDaño(float multiplicador) { 
+	    	multiplicadorDaño *= multiplicador; 
+	    	}
+	    
+	    public void mejorarPrecision(float multiplicador) { 
+	    	multiplicadorPrecision *= multiplicador; 
+	    	}
+	    
+	    public void mejorarCargador(float multiplicador) { 
+	    	tamCargador = (int)(tamCargador * multiplicador); 
+	    	}
+	    
+	    public void mejorarDistancia(float multiplicador) { 
+	    	multiplicadorDistancia *= multiplicador; 
+	    	}
+	    
+	    
+	  
 	    public void recibirDanio(float danio) {
 	        this.vida -= danio;
 
@@ -105,7 +118,69 @@ public class Jugador {
 	        System.out.println(nombre + " ataca a " + enemigo.nombre + " con " + arma.getNombre() + " causando " + danio + " de daño");
 	    }
 	   
-	    }
-	   
+	    
+	  
+	    	public boolean estadoJugador(){
+	    		return vida > 0;
+	
+	    	} 
+	    	public float getVida() {
+	    		return vida;
+	    	}
+	    	public float getEscudo() {
+	    		return escudo;
+	
+	    	}
+	    	public String getNombre() {
+	    		return nombre;
+	    	}
+
+	    	public float getVidaMax() {
+	    		return vidaMax;
+	    	}
+
+			public float getMultiplicadorDaño() {
+				return multiplicadorDaño;
+			}
 
 
+			public float getMultiplicadorDistancia() {
+				return multiplicadorDistancia;
+			}
+
+
+			public float getMultiplicadorPrecision() {
+				return multiplicadorPrecision;
+			}
+
+
+			public float getTamCargador() {
+				return tamCargador;
+			}
+
+
+			public Arma getArma() {
+				return arma;
+			}
+
+
+			public Objetos getObjeto() {
+				return objeto;
+			}
+
+
+			public boolean isBot() {
+				return bot;
+			}
+
+
+			public ClasePersonaje getClase() {
+				return clase;
+			}
+
+
+			public static Objetos[] getPoolObjetos() {
+				return Pool_Objetos;
+			}
+	    	
+}

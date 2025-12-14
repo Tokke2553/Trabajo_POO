@@ -15,18 +15,19 @@ public abstract class ClasePersonaje {
     float multiDMG;
     float multiPRS;
     int tamCargador;
-    
+    float vidaMax;
     //Guardamos arma en una variable
     Arma arma;
   
     
     //Constructor de ClasePersonaje
 
-    public ClasePersonaje(String personaje, float vida,  float escudo, float multiDST, float multiDMG, float multiPRS,int tamCargador) {
+    public ClasePersonaje(String personaje, float vida,float vidaMax,  float escudo, float multiDST, float multiDMG, float multiPRS,int tamCargador) {
 
     	
     	this.personaje = personaje;
         this.vida = vida;
+        this.vidaMax = vidaMax;
         this.escudo = escudo;
         this.multiDMG = multiDMG;
         this.multiPRS = multiPRS;
@@ -103,7 +104,9 @@ public abstract class ClasePersonaje {
 	public Arma getArma() {
 		return arma;
 	}
-
+	public float getVidaMax() {
+		return vidaMax;
+	}
 
 	
 	public static ClasePersonaje[] obtenerClases() {
