@@ -1,0 +1,461 @@
+--- Combate en Zona 1 (Centro: 20, 35)
+💥 (Zona 1) Bot72 ataca a Bot69 (72 daño). Vida restante: 128
+💥 (Zona 1) Bot72 ataca a Bot69 (72 daño). Vida restante: 56
+💥 (Zona 1) Bot72 ataca a Bot69 (72 daño). Vida restante: 0
+💀 (Zona 1) Bot69 eliminado por Bot72 con Escopeta
+💥 (Zona 1) Bot35 ataca a Bot97 (86 daño). Vida restante: 0
+💀 (Zona 1) Bot97 eliminado por Bot35 con Escopeta
+--- Combate en Zona 2 (Centro: 20, 18)
+🔫 (Zona 2) Bot0 falló a Bot50
+💥 (Zona 2) Bot0 ataca a Bot50 (36 daño). Vida restante: 39
+💥 (Zona 2) Bot0 ataca a Bot50 (36 daño). Vida restante: 3
+💥 (Zona 2) Bot0 ataca a Bot50 (36 daño). Vida restante: 0
+💀 (Zona 2) Bot50 eliminado por Bot0 con Rifle
+💥 (Zona 2) Bot77 ataca a Bot96 (72 daño). Vida restante: 28
+💥 (Zona 2) Bot77 ataca a Bot96 (72 daño). Vida restante: 0
+💀 (Zona 2) Bot96 eliminado por Bot77 con Escopeta
+💥 (Zona 2) Bot98 ataca a Bot24 (30 daño). Vida restante: 70
+💥 (Zona 2) Bot98 ataca a Bot24 (30 daño). Vida restante: 40
+💥 (Zona 2) Bot98 ataca a Bot24 (30 daño). Vida restante: 10
+💥 (Zona 2) Bot98 ataca a Bot24 (30 daño). Vida restante: 0
+💀 (Zona 2) Bot24 eliminado por Bot98 con Rifle
+🔫 (Zona 2) Bot5 falló a Bot83
+💥 (Zona 2) Bot5 ataca a Bot83 (36 daño). Vida restante: 100
+💥 (Zona 2) Bot71 ataca a Bot67 (65 daño). Vida restante: 10
+💥 (Zona 2) Bot71 ataca a Bot67 (65 daño). Vida restante: 0
+💀 (Zona 2) Bot67 eliminado por Bot71 con Escopeta
+💥 (Zona 2) Bot22 ataca a Bot80 (65 daño). Vida restante: 100
+💥 (Zona 2) Bot22 ataca a Bot80 (65 daño). Vida restante: 70
+💥 (Zona 2) Bot22 ataca a Bot80 (65 daño). Vida restante: 5
+💥 (Zona 2) Bot22 ataca a Bot80 (65 daño). Vida restante: 0
+💀 (Zona 2) Bot80 eliminado por Bot22 con Escopeta
+💥 (Zona 2) Bot45 ataca a Bot31 (26 daño). Vida restante: 100
+💥 (Zona 2) Bot45 ataca a Bot31 (26 daño). Vida restante: 100
+💥 (Zona 2) Bot45 ataca a Bot31 (26 daño). Vida restante: 100
+💥 (Zona 2) Bot45 ataca a Bot31 (26 daño). Vida restante: 96
+💥 (Zona 2) Bot45 ataca a Bot31 (26 daño). Vida restante: 70
+💥 (Zona 2) Bot45 ataca a Bot31 (26 daño). Vida restante: 44
+🔫 (Zona 2) Bot45 falló a Bot31
+💥 (Zona 2) Bot45 ataca a Bot31 (26 daño). Vida restante: 18
+💥 (Zona 2) Bot45 ataca a Bot31 (26 daño). Vida restante: 0
+💀 (Zona 2) Bot31 eliminado por Bot45 con Subfusil
+💥 (Zona 2) Bot34 ataca a Bot38 (194 daño). Vida restante: 0
+💀 (Zona 2) Bot38 eliminado por Bot34 con Machete
+--- Combate en Zona 3 (Centro: 14, 26)
+💥 (Zona 3) Bot1 ataca a Bot11 (156 daño). Vida restante: 0
+💀 (Zona 3) Bot11 eliminado por Bot1 con Patito de Goma
+💥 (Zona 3) Bot14 ataca a Bot29 (156 daño). Vida restante: 94
+💥 (Zona 3) Bot14 ataca a Bot29 (156 daño). Vida restante: 0
+💀 (Zona 3) Bot29 eliminado por Bot14 con Patito de Goma
+💥 (Zona 3) Bot79 ataca a Bot65 (216 daño). Vida restante: 0
+💀 (Zona 3) Bot65 eliminado por Bot79 con Machete
+💥 (Zona 3) Bot61 ataca a Bot3 (373 daño). Vida restante: 0
+💀 (Zona 3) Bot3 eliminado por Bot61 con Lanzacohetes
+--- Combate en Zona 4 (Centro: 39, 31)
+💥 (Zona 4) Bot91 ataca a Bot60 (166 daño). Vida restante: 34
+💥 (Zona 4) Bot91 ataca a Bot60 (166 daño). Vida restante: 0
+💀 (Zona 4) Bot60 eliminado por Bot91 con Francotirador
+💥 (Zona 4) Bot70 ataca a Bot9 (86 daño). Vida restante: 29
+💥 (Zona 4) Bot70 ataca a Bot9 (86 daño). Vida restante: 0
+💀 (Zona 4) Bot9 eliminado por Bot70 con Escopeta
+💥 (Zona 4) Bot39 ataca a Bot81 (199 daño). Vida restante: 51
+💥 (Zona 4) Bot39 ataca a Bot81 (199 daño). Vida restante: 0
+💀 (Zona 4) Bot81 eliminado por Bot39 con Francotirador
+--- Combate en Zona 5 (Centro: 12, 12)
+💥 (Zona 5) Bot62 ataca a Bot75 (22 daño). Vida restante: 78
+💥 (Zona 5) Bot62 ataca a Bot75 (22 daño). Vida restante: 56
+💥 (Zona 5) Bot62 ataca a Bot75 (22 daño). Vida restante: 34
+💥 (Zona 5) Bot62 ataca a Bot75 (22 daño). Vida restante: 12
+💥 (Zona 5) Bot62 ataca a Bot75 (22 daño). Vida restante: 0
+💀 (Zona 5) Bot75 eliminado por Bot62 con Subfusil
+💥 (Zona 5) Bot26 ataca a Bot92 (156 daño). Vida restante: 0
+💀 (Zona 5) Bot92 eliminado por Bot26 con Patito de Goma
+--- Combate en Zona 1 (Centro: 20, 35)
+💥 (Zona 1) Bot73 ataca a Bot45 (387 daño). Vida restante: 0
+💀 (Zona 1) Bot45 eliminado por Bot73 con Patito de Goma
+💥 (Zona 1) Bot89 ataca a Bot61 (199 daño). Vida restante: 1
+💥 (Zona 1) Bot89 ataca a Bot61 (199 daño). Vida restante: 0
+💀 (Zona 1) Bot61 eliminado por Bot89 con Francotirador
+💥 (Zona 1) Bot94 ataca a Bot64 (239 daño). Vida restante: 0
+💀 (Zona 1) Bot64 eliminado por Bot94 con Francotirador
+--- Combate en Zona 2 (Centro: 20, 18)
+💥 (Zona 2) Bot83 ataca a Bot28 (37 daño). Vida restante: 38
+💥 (Zona 2) Bot83 ataca a Bot28 (37 daño). Vida restante: 1
+💥 (Zona 2) Bot83 ataca a Bot28 (37 daño). Vida restante: 0
+💀 (Zona 2) Bot28 eliminado por Bot83 con Subfusil
+💥 (Zona 2) Bot44 ataca a Bot2 (387 daño). Vida restante: 0
+💀 (Zona 2) Bot2 eliminado por Bot44 con Patito de Goma
+💥 (Zona 2) Bot39 ataca a Bot55 (239 daño). Vida restante: 0
+💀 (Zona 2) Bot55 eliminado por Bot39 con Francotirador
+💥 (Zona 2) Bot85 ataca a Bot34 (60 daño). Vida restante: 30
+💥 (Zona 2) Bot85 ataca a Bot34 (60 daño). Vida restante: 0
+💀 (Zona 2) Bot34 eliminado por Bot85 con Arco
+--- Combate en Zona 3 (Centro: 14, 26)
+💥 (Zona 3) Bot56 ataca a Bot1 (45 daño). Vida restante: 55
+💥 (Zona 3) Bot56 ataca a Bot1 (45 daño). Vida restante: 10
+💥 (Zona 3) Bot56 ataca a Bot1 (45 daño). Vida restante: 0
+💀 (Zona 3) Bot1 eliminado por Bot56 con Subfusil
+--- Combate en Zona 4 (Centro: 39, 31)
+💥 (Zona 4) Bot91 ataca a Bot30 (199 daño). Vida restante: 1
+💥 (Zona 4) Bot91 ataca a Bot30 (199 daño). Vida restante: 0
+💀 (Zona 4) Bot30 eliminado por Bot91 con Francotirador
+💥 (Zona 4) Bot20 ataca a Bot36 (322 daño). Vida restante: 0
+💀 (Zona 4) Bot36 eliminado por Bot20 con Patito de Goma
+💥 (Zona 4) Bot25 ataca a Bot13 (645 daño). Vida restante: 0
+💀 (Zona 4) Bot13 eliminado por Bot25 con Lanzacohetes
+--- Combate en Zona 5 (Centro: 12, 12)
+💥 (Zona 5) Bot82 ataca a Bot26 (179 daño). Vida restante: 0
+💀 (Zona 5) Bot26 eliminado por Bot82 con Francotirador
+💥 (Zona 5) Bot16 ataca a Bot62 (322 daño). Vida restante: 0
+💀 (Zona 5) Bot62 eliminado por Bot16 con Patito de Goma
+💥 (Zona 5) Bot86 ataca a Bot4 (199 daño). Vida restante: 0
+💀 (Zona 5) Bot4 eliminado por Bot86 con Francotirador
+💥 (Zona 5) Bot8 ataca a Bot63 (199 daño). Vida restante: 0
+💀 (Zona 5) Bot63 eliminado por Bot8 con Francotirador
+--- Combate en Zona 1 (Centro: 20, 35)
+💥 (Zona 1) Bot18 ataca a Bot0 (54 daño). Vida restante: 161
+💥 (Zona 1) Bot18 ataca a Bot0 (54 daño). Vida restante: 107
+💥 (Zona 1) Bot18 ataca a Bot0 (54 daño). Vida restante: 53
+💥 (Zona 1) Bot18 ataca a Bot0 (54 daño). Vida restante: 0
+💀 (Zona 1) Bot0 eliminado por Bot18 con Subfusil
+💥 (Zona 1) Bot73 ataca a Bot48 (1156 daño). Vida restante: 0
+💀 (Zona 1) Bot48 eliminado por Bot73 con Patito de Goma
+💥 (Zona 1) Bot52 ataca a Bot40 (1337 daño). Vida restante: 0
+💀 (Zona 1) Bot40 eliminado por Bot52 con Lanzacohetes
+💥 (Zona 1) Bot44 ataca a Bot47 (1156 daño). Vida restante: 0
+💀 (Zona 1) Bot47 eliminado por Bot44 con Patito de Goma
+💥 (Zona 1) 1 ataca a Bot49 (20 daño). Vida restante: 80
+💥 (Zona 1) 1 ataca a Bot49 (20 daño). Vida restante: 60
+💥 (Zona 1) 1 ataca a Bot49 (20 daño). Vida restante: 40
+💥 (Zona 1) 1 ataca a Bot49 (20 daño). Vida restante: 20
+💥 (Zona 1) 1 ataca a Bot49 (20 daño). Vida restante: 0
+💀 (Zona 1) Bot49 eliminado por 1 con Arco
+💥 (Zona 1) Bot12 ataca a Bot68 (86 daño). Vida restante: 4
+💥 (Zona 1) Bot12 ataca a Bot68 (86 daño). Vida restante: 0
+💀 (Zona 1) Bot68 eliminado por Bot12 con Arco
+💥 (Zona 1) Bot14 ataca a Bot43 (963 daño). Vida restante: 0
+💀 (Zona 1) Bot43 eliminado por Bot14 con Patito de Goma
+--- Combate en Zona 2 (Centro: 20, 18)
+💥 (Zona 2) Bot93 ataca a Bot74 (867 daño). Vida restante: 0
+💀 (Zona 2) Bot74 eliminado por Bot93 con Patito de Goma
+💥 (Zona 2) Bot83 ataca a Bot17 (54 daño). Vida restante: 46
+💥 (Zona 2) Bot83 ataca a Bot17 (54 daño). Vida restante: 0
+💀 (Zona 2) Bot17 eliminado por Bot83 con Subfusil
+💥 (Zona 2) Bot39 ataca a Bot16 (713 daño). Vida restante: 0
+💀 (Zona 2) Bot16 eliminado por Bot39 con Francotirador
+💥 (Zona 2) Bot66 ataca a Bot42 (1156 daño). Vida restante: 0
+💀 (Zona 2) Bot42 eliminado por Bot66 con Patito de Goma
+--- Combate en Zona 3 (Centro: 14, 26)
+💥 (Zona 3) Bot94 ataca a Bot46 (713 daño). Vida restante: 0
+💀 (Zona 3) Bot46 eliminado por Bot94 con Francotirador
+💥 (Zona 3) Bot91 ataca a Bot87 (594 daño). Vida restante: 0
+💀 (Zona 3) Bot87 eliminado por Bot91 con Francotirador
+💥 (Zona 3) Bot89 ataca a Bot88 (594 daño). Vida restante: 0
+💀 (Zona 3) Bot88 eliminado por Bot89 con Francotirador
+💥 (Zona 3) Bot8 ataca a Bot79 (594 daño). Vida restante: 0
+💀 (Zona 3) Bot79 eliminado por Bot8 con Francotirador
+--- Combate en Zona 4 (Centro: 39, 31)
+💥 (Zona 4) Bot82 ataca a Bot51 (535 daño). Vida restante: 0
+💀 (Zona 4) Bot51 eliminado por Bot82 con Francotirador
+💥 (Zona 4) Bot20 ataca a Bot25 (963 daño). Vida restante: 0
+💀 (Zona 4) Bot25 eliminado por Bot20 con Patito de Goma
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+💥 (Zona 1) Bot91 ataca a 1 (1479 daño). Vida restante: 0
+💀 (Zona 1) 1 eliminado por Bot91 con Francotirador
+💥 (Zona 1) Bot56 ataca a Bot18 (111 daño). Vida restante: 0
+💀 (Zona 1) Bot18 eliminado por Bot56 con Subfusil
+💥 (Zona 1) Bot12 ataca a Bot70 (214 daño). Vida restante: 0
+💀 (Zona 1) Bot70 eliminado por Bot12 con Arco
+💥 (Zona 1) Bot14 ataca a Bot19 (1997 daño). Vida restante: 0
+💀 (Zona 1) Bot19 eliminado por Bot14 con Patito de Goma
+💥 (Zona 1) Bot8 ataca a Bot73 (1479 daño). Vida restante: 0
+💀 (Zona 1) Bot73 eliminado por Bot8 con Francotirador
+💥 (Zona 1) Bot89 ataca a Bot23 (1479 daño). Vida restante: 0
+💀 (Zona 1) Bot23 eliminado por Bot89 con Francotirador
+--- Combate en Zona 2 (Centro: 20, 18)
+💥 (Zona 2) Bot83 ataca a Bot21 (93 daño). Vida restante: 0
+💀 (Zona 2) Bot21 eliminado por Bot83 con Subfusil
+💥 (Zona 2) Bot15 ataca a Bot95 (1479 daño). Vida restante: 0
+💀 (Zona 2) Bot95 eliminado por Bot15 con Francotirador
+💥 (Zona 2) Bot66 ataca a Bot93 (2396 daño). Vida restante: 0
+💀 (Zona 2) Bot93 eliminado por Bot66 con Patito de Goma
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+💥 (Zona 4) Bot39 ataca a Bot44 (1775 daño). Vida restante: 0
+💀 (Zona 4) Bot44 eliminado por Bot39 con Francotirador
+--- Combate en Zona 5 (Centro: 12, 12)
+💥 (Zona 5) Bot90 ataca a Bot59 (2773 daño). Vida restante: 0
+💀 (Zona 5) Bot59 eliminado por Bot90 con Lanzacohetes
+--- Combate en Zona 1 (Centro: 20, 35)
+💥 (Zona 1) Bot15 ataca a Bot37 (7632 daño). Vida restante: 0
+💀 (Zona 1) Bot37 eliminado por Bot15 con Francotirador
+💥 (Zona 1) Bot6 ataca a Bot7 (333 daño). Vida restante: 0
+💀 (Zona 1) Bot7 eliminado por Bot6 con Arco
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+💥 (Zona 3) Bot94 ataca a Bot56 (9158 daño). Vida restante: 0
+💀 (Zona 3) Bot56 eliminado por Bot94 con Francotirador
+--- Combate en Zona 4 (Centro: 39, 31)
+💥 (Zona 4) Bot20 ataca a Bot41 (3450 daño). Vida restante: 0
+💀 (Zona 4) Bot41 eliminado por Bot20 con Patito de Goma
+💥 (Zona 4) Bot8 ataca a Bot98 (7632 daño). Vida restante: 0
+💀 (Zona 4) Bot98 eliminado por Bot8 con Francotirador
+💥 (Zona 4) Bot14 ataca a Bot76 (3450 daño). Vida restante: 0
+💀 (Zona 4) Bot76 eliminado por Bot14 con Patito de Goma
+--- Combate en Zona 5 (Centro: 12, 12)
+💥 (Zona 5) Bot90 ataca a Bot66 (6901 daño). Vida restante: 0
+💀 (Zona 5) Bot66 eliminado por Bot90 con Lanzacohetes
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+💥 (Zona 2) Bot85 ataca a Bot35 (1104 daño). Vida restante: 0
+💀 (Zona 2) Bot35 eliminado por Bot85 con Arco
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+💥 (Zona 5) Bot12 ataca a Bot33 (920 daño). Vida restante: 0
+💀 (Zona 5) Bot33 eliminado por Bot12 con Arco
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+💥 (Zona 2) Bot85 ataca a Bot99 (4748 daño). Vida restante: 0
+💀 (Zona 2) Bot99 eliminado por Bot85 con Arco
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+💥 (Zona 4) Bot20 ataca a Bot14 (63792 daño). Vida restante: 0
+💀 (Zona 4) Bot14 eliminado por Bot20 con Patito de Goma
+--- Combate en Zona 5 (Centro: 12, 12)
+💥 (Zona 5) Bot12 ataca a Bot32 (3956 daño). Vida restante: 0
+💀 (Zona 5) Bot32 eliminado por Bot12 con Arco
+💥 (Zona 5) Bot83 ataca a Bot78 (5127 daño). Vida restante: 0
+💀 (Zona 5) Bot78 eliminado por Bot83 con Subfusil
+💥 (Zona 5) Bot52 ataca a Bot71 (61528 daño). Vida restante: 0
+💀 (Zona 5) Bot71 eliminado por Bot52 con Lanzacohetes
+--- Combate en Zona 1 (Centro: 20, 35)
+💥 (Zona 1) Bot8 ataca a Bot77 (351098 daño). Vida restante: 0
+💀 (Zona 1) Bot77 eliminado por Bot8 con Francotirador
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+💥 (Zona 3) Bot85 ataca a Bot86 (35275 daño). Vida restante: 0
+💀 (Zona 3) Bot86 eliminado por Bot85 con Arco
+--- Combate en Zona 4 (Centro: 39, 31)
+💥 (Zona 4) Bot15 ataca a Bot72 (351098 daño). Vida restante: 0
+💀 (Zona 4) Bot72 eliminado por Bot15 con Francotirador
+--- Combate en Zona 5 (Centro: 12, 12)
+💥 (Zona 5) Bot39 ataca a Bot27 (421317 daño). Vida restante: 0
+💀 (Zona 5) Bot27 eliminado por Bot39 con Francotirador
+💥 (Zona 5) Bot12 ataca a Bot82 (29395 daño). Vida restante: 0
+💀 (Zona 5) Bot82 eliminado por Bot12 con Arco
+💥 (Zona 5) Bot6 ataca a Bot83 (26456 daño). Vida restante: 0
+💀 (Zona 5) Bot83 eliminado por Bot6 con Arco
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+💥 (Zona 5) Bot6 ataca a Bot12 (94796 daño). Vida restante: 0
+💀 (Zona 5) Bot12 eliminado por Bot6 con Arco
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
+--- Combate en Zona 1 (Centro: 20, 35)
+--- Combate en Zona 2 (Centro: 20, 18)
+--- Combate en Zona 3 (Centro: 14, 26)
+--- Combate en Zona 4 (Centro: 39, 31)
+--- Combate en Zona 5 (Centro: 12, 12)
