@@ -35,9 +35,21 @@ public class MapaGUI {
 
     private void cargarImagen() {
         try {
-            File file = new File("mapaF.jpg");
-            if (file.exists()) {
-                imagenFondo = new ImageIcon(file.getAbsolutePath()).getImage();
+            // Intenta cargar el recurso desde la misma carpeta (classpath) de la clase MapaGUI
+            java.net.URL url = getClass().getResource("mapaF.jpg"); 
+
+            if (url != null) {
+                imagenFondo = new ImageIcon(url).getImage();
+                System.out.println("Imagen cargada con éxito desde el Classpath: " + url);
+            } else {
+                // Fallback de depuración (menos fiable)
+                File file = new File("mapaF.jpg"); 
+                if (file.exists()) {
+                    imagenFondo = new ImageIcon(file.getAbsolutePath()).getImage();
+                    System.err.println("Imagen cargada con éxito usando File (ruta relativa): " + file.getAbsolutePath());
+                } else {
+                    System.err.println("ERROR CRÍTICO: No se encontró 'mapaF.jpg'. Verifique que esté en la carpeta Paquete/");
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -50,6 +62,7 @@ public class MapaGUI {
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setLayout(new BorderLayout());
 
+        
         lienzo = new LienzoMapa();
         
         // --- DETECCIÓN DE CLIC PARA VIAJAR ---
