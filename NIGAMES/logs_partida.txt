@@ -1,0 +1,1534 @@
+BATALLA INICIADA
+RONDA 1
+Jugador1 recibe mejoraDanio
+Bot0 recibe mejoraCargador
+Bot1 recibe escudo
+Bot2 recibe escudo
+Bot3 recibe mejoraDanio
+Bot4 recibe escudo
+Bot5 recibe cura
+Bot6 recibe mejoraDistancia
+Bot8 recibe mejoraPrecision
+Bot9 recibe cura
+Jugador1 usa mejoraDanio
+Bot0 usa mejoraCargador
+Bot1 usa escudo
+Bot2 usa escudo
+Bot3 usa mejoraDanio
+Bot4 usa escudo
+Bot5 usa cura
+Bot6 usa mejoraDistancia
+Bot8 usa mejoraPrecision
+Bot9 usa cura
+Bot2 daño tormenta
+Bot6 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Bot4 ataca a Bot5
+Bot5 ataca a Bot3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+Bot9 ataca a Bot0
+Bot0 ataca a Jugador1
+RONDA 2
+Jugador1 recibe mejoraPrecision
+Bot0 recibe mejoraDistancia
+Bot1 recibe escudo
+Bot2 recibe escudo
+Bot3 recibe mejoraDistancia
+Bot5 recibe mejoraDistancia
+Bot6 recibe mejoraDanio
+Bot7 recibe mejoraDanio
+Bot8 recibe mejoraCargador
+Jugador1 usa mejoraPrecision
+Bot0 usa mejoraDistancia
+Bot1 usa escudo
+Bot2 usa escudo
+Bot3 usa mejoraDistancia
+Bot5 usa mejoraDistancia
+Bot6 usa mejoraDanio
+Bot7 usa mejoraDanio
+Bot8 usa mejoraCargador
+Bot2 daño tormenta
+Bot6 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Bot3 ataca a Bot4
+Bot4 ataca a Bot5
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+RONDA 3
+Bot1 recibe mejoraPrecision
+Bot2 recibe mejoraDanio
+Bot4 recibe mejoraDistancia
+Bot5 recibe cura
+Bot6 recibe cura
+Bot8 recibe escudo
+Bot9 recibe mejoraDistancia
+Bot1 usa mejoraPrecision
+Bot2 usa mejoraDanio
+Bot4 usa mejoraDistancia
+Bot5 usa cura
+Bot6 usa cura
+Bot8 usa escudo
+Bot9 usa mejoraDistancia
+Bot2 daño tormenta
+Bot6 daño tormenta
+Bot8 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Bot5 ataca a Bot4
+Bot4 ataca a Bot3
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+RONDA 4
+Jugador1 recibe cura
+Bot0 recibe mejoraPrecision
+Bot1 recibe mejoraPrecision
+Bot3 recibe mejoraCargador
+Bot4 recibe mejoraPrecision
+Bot6 recibe escudo
+Bot7 recibe escudo
+Bot9 recibe mejoraDanio
+Jugador1 usa cura
+Bot0 usa mejoraPrecision
+Bot1 usa mejoraPrecision
+Bot3 usa mejoraCargador
+Bot4 usa mejoraPrecision
+Bot6 usa escudo
+Bot7 usa escudo
+Bot9 usa mejoraDanio
+Bot2 daño tormenta
+Bot6 daño tormenta
+Bot8 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Bot3 ataca a Bot5
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 5
+Bot0 recibe mejoraDanio
+Bot2 recibe mejoraDanio
+Bot3 recibe mejoraCargador
+Bot4 recibe mejoraDanio
+Bot5 recibe mejoraCargador
+Bot7 recibe mejoraPrecision
+Bot8 recibe cura
+Bot0 usa mejoraDanio
+Bot2 usa mejoraDanio
+Bot3 usa mejoraCargador
+Bot4 usa mejoraDanio
+Bot5 usa mejoraCargador
+Bot7 usa mejoraPrecision
+Bot8 usa cura
+Bot0 daño tormenta
+Bot2 daño tormenta
+Bot6 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Bot3 ataca a Bot4
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 6
+Bot0 recibe mejoraCargador
+Bot4 recibe mejoraDistancia
+Bot5 recibe escudo
+Bot6 recibe mejoraDistancia
+Bot7 recibe mejoraCargador
+Bot8 recibe mejoraPrecision
+Bot9 recibe escudo
+Bot0 usa mejoraCargador
+Bot4 usa mejoraDistancia
+Bot5 usa escudo
+Bot6 usa mejoraDistancia
+Bot7 usa mejoraCargador
+Bot8 usa mejoraPrecision
+Bot9 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot6 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Bot3 ataca a Bot4
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+Bot9 ataca a Bot0
+RONDA 7
+Jugador1 recibe cura
+Bot0 recibe mejoraDanio
+Bot1 recibe escudo
+Bot2 recibe cura
+Bot3 recibe mejoraDistancia
+Bot4 recibe mejoraPrecision
+Bot6 recibe escudo
+Bot7 recibe escudo
+Bot9 recibe cura
+Jugador1 usa cura
+Bot0 usa mejoraDanio
+Bot1 usa escudo
+Bot2 usa cura
+Bot3 usa mejoraDistancia
+Bot4 usa mejoraPrecision
+Bot6 usa escudo
+Bot7 usa escudo
+Bot9 usa cura
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+RONDA 8
+Bot0 recibe mejoraDanio
+Bot1 recibe escudo
+Bot2 recibe mejoraDistancia
+Bot3 recibe mejoraPrecision
+Bot4 recibe mejoraDistancia
+Bot7 recibe mejoraDanio
+Bot9 recibe mejoraDanio
+Bot0 usa mejoraDanio
+Bot1 usa escudo
+Bot2 usa mejoraDistancia
+Bot3 usa mejoraPrecision
+Bot4 usa mejoraDistancia
+Bot7 usa mejoraDanio
+Bot9 usa mejoraDanio
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 9
+Jugador1 recibe escudo
+Bot0 recibe mejoraCargador
+Bot1 recibe mejoraDistancia
+Bot3 recibe cura
+Bot4 recibe mejoraCargador
+Bot5 recibe cura
+Bot6 recibe cura
+Bot8 recibe mejoraDanio
+Jugador1 usa escudo
+Bot0 usa mejoraCargador
+Bot1 usa mejoraDistancia
+Bot3 usa cura
+Bot4 usa mejoraCargador
+Bot5 usa cura
+Bot6 usa cura
+Bot8 usa mejoraDanio
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+RONDA 10
+Jugador1 recibe mejoraDanio
+Bot0 recibe mejoraPrecision
+Bot1 recibe escudo
+Bot2 recibe mejoraCargador
+Bot3 recibe mejoraDistancia
+Bot4 recibe mejoraCargador
+Bot5 recibe escudo
+Bot6 recibe mejoraDanio
+Bot9 recibe mejoraDistancia
+Jugador1 usa mejoraDanio
+Bot0 usa mejoraPrecision
+Bot1 usa escudo
+Bot2 usa mejoraCargador
+Bot3 usa mejoraDistancia
+Bot4 usa mejoraCargador
+Bot5 usa escudo
+Bot6 usa mejoraDanio
+Bot9 usa mejoraDistancia
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 11
+Jugador1 recibe mejoraDanio
+Bot0 recibe mejoraCargador
+Bot1 recibe mejoraCargador
+Bot3 recibe mejoraDistancia
+Bot4 recibe mejoraPrecision
+Bot7 recibe mejoraPrecision
+Bot9 recibe escudo
+Jugador1 usa mejoraDanio
+Bot0 usa mejoraCargador
+Bot1 usa mejoraCargador
+Bot3 usa mejoraDistancia
+Bot4 usa mejoraPrecision
+Bot7 usa mejoraPrecision
+Bot9 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+RONDA 12
+Jugador1 recibe mejoraDistancia
+Bot0 recibe mejoraPrecision
+Bot1 recibe mejoraDistancia
+Bot2 recibe mejoraDanio
+Bot4 recibe mejoraDistancia
+Bot6 recibe mejoraDistancia
+Bot7 recibe cura
+Bot8 recibe mejoraDistancia
+Jugador1 usa mejoraDistancia
+Bot0 usa mejoraPrecision
+Bot1 usa mejoraDistancia
+Bot2 usa mejoraDanio
+Bot4 usa mejoraDistancia
+Bot6 usa mejoraDistancia
+Bot7 usa cura
+Bot8 usa mejoraDistancia
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+Bot9 ataca a Bot0
+RONDA 13
+Bot2 recibe mejoraDanio
+Bot3 recibe mejoraCargador
+Bot5 recibe escudo
+Bot6 recibe escudo
+Bot7 recibe mejoraPrecision
+Bot2 usa mejoraDanio
+Bot3 usa mejoraCargador
+Bot5 usa escudo
+Bot6 usa escudo
+Bot7 usa mejoraPrecision
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+RONDA 14
+Jugador1 recibe escudo
+Bot0 recibe cura
+Bot1 recibe mejoraCargador
+Bot2 recibe mejoraCargador
+Bot6 recibe mejoraCargador
+Bot7 recibe cura
+Bot8 recibe mejoraDistancia
+Bot9 recibe mejoraCargador
+Jugador1 usa escudo
+Bot0 usa cura
+Bot1 usa mejoraCargador
+Bot2 usa mejoraCargador
+Bot6 usa mejoraCargador
+Bot7 usa cura
+Bot8 usa mejoraDistancia
+Bot9 usa mejoraCargador
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+Bot9 ataca a Bot0
+RONDA 15
+Jugador1 recibe mejoraDistancia
+Bot4 recibe mejoraCargador
+Bot5 recibe mejoraCargador
+Bot6 recibe escudo
+Bot7 recibe mejoraPrecision
+Bot8 recibe escudo
+Bot9 recibe mejoraDistancia
+Jugador1 usa mejoraDistancia
+Bot4 usa mejoraCargador
+Bot5 usa mejoraCargador
+Bot6 usa escudo
+Bot7 usa mejoraPrecision
+Bot8 usa escudo
+Bot9 usa mejoraDistancia
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+Bot9 ataca a Bot0
+RONDA 16
+Jugador1 recibe mejoraDanio
+Bot0 recibe mejoraCargador
+Bot1 recibe mejoraCargador
+Bot2 recibe mejoraDistancia
+Bot3 recibe mejoraCargador
+Bot4 recibe mejoraDistancia
+Bot5 recibe mejoraCargador
+Bot6 recibe escudo
+Bot7 recibe mejoraDistancia
+Bot8 recibe mejoraPrecision
+Bot9 recibe mejoraDistancia
+Jugador1 usa mejoraDanio
+Bot0 usa mejoraCargador
+Bot1 usa mejoraCargador
+Bot2 usa mejoraDistancia
+Bot3 usa mejoraCargador
+Bot4 usa mejoraDistancia
+Bot5 usa mejoraCargador
+Bot6 usa escudo
+Bot7 usa mejoraDistancia
+Bot8 usa mejoraPrecision
+Bot9 usa mejoraDistancia
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 17
+Jugador1 recibe cura
+Bot2 recibe cura
+Bot3 recibe mejoraDistancia
+Bot4 recibe mejoraDistancia
+Bot5 recibe mejoraCargador
+Bot7 recibe mejoraDanio
+Bot8 recibe mejoraDanio
+Bot9 recibe escudo
+Jugador1 usa cura
+Bot2 usa cura
+Bot3 usa mejoraDistancia
+Bot4 usa mejoraDistancia
+Bot5 usa mejoraCargador
+Bot7 usa mejoraDanio
+Bot8 usa mejoraDanio
+Bot9 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 18
+Jugador1 recibe mejoraCargador
+Bot0 recibe mejoraPrecision
+Bot1 recibe cura
+Bot3 recibe mejoraCargador
+Bot4 recibe mejoraPrecision
+Bot6 recibe mejoraPrecision
+Bot7 recibe mejoraDistancia
+Bot8 recibe escudo
+Bot9 recibe cura
+Jugador1 usa mejoraCargador
+Bot0 usa mejoraPrecision
+Bot1 usa cura
+Bot3 usa mejoraCargador
+Bot4 usa mejoraPrecision
+Bot6 usa mejoraPrecision
+Bot7 usa mejoraDistancia
+Bot8 usa escudo
+Bot9 usa cura
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+RONDA 19
+Jugador1 recibe cura
+Bot0 recibe escudo
+Bot1 recibe mejoraPrecision
+Bot3 recibe escudo
+Bot4 recibe mejoraPrecision
+Bot5 recibe mejoraDanio
+Bot6 recibe escudo
+Jugador1 usa cura
+Bot0 usa escudo
+Bot1 usa mejoraPrecision
+Bot3 usa escudo
+Bot4 usa mejoraPrecision
+Bot5 usa mejoraDanio
+Bot6 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 20
+Bot0 recibe escudo
+Bot1 recibe cura
+Bot2 recibe cura
+Bot3 recibe mejoraDistancia
+Bot4 recibe cura
+Bot7 recibe escudo
+Bot8 recibe cura
+Bot9 recibe mejoraDanio
+Bot0 usa escudo
+Bot1 usa cura
+Bot2 usa cura
+Bot3 usa mejoraDistancia
+Bot4 usa cura
+Bot7 usa escudo
+Bot8 usa cura
+Bot9 usa mejoraDanio
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 21
+Jugador1 recibe cura
+Bot0 recibe mejoraDistancia
+Bot2 recibe cura
+Bot3 recibe mejoraDanio
+Bot4 recibe mejoraPrecision
+Bot7 recibe mejoraCargador
+Bot8 recibe cura
+Bot9 recibe mejoraDistancia
+Jugador1 usa cura
+Bot0 usa mejoraDistancia
+Bot2 usa cura
+Bot3 usa mejoraDanio
+Bot4 usa mejoraPrecision
+Bot7 usa mejoraCargador
+Bot8 usa cura
+Bot9 usa mejoraDistancia
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 22
+Bot0 recibe cura
+Bot1 recibe mejoraDistancia
+Bot2 recibe mejoraDistancia
+Bot3 recibe mejoraPrecision
+Bot4 recibe mejoraDanio
+Bot5 recibe mejoraDanio
+Bot6 recibe mejoraDanio
+Bot7 recibe escudo
+Bot9 recibe escudo
+Bot0 usa cura
+Bot1 usa mejoraDistancia
+Bot2 usa mejoraDistancia
+Bot3 usa mejoraPrecision
+Bot4 usa mejoraDanio
+Bot5 usa mejoraDanio
+Bot6 usa mejoraDanio
+Bot7 usa escudo
+Bot9 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot6 ataca a Bot2
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 23
+Bot0 recibe mejoraDanio
+Bot1 recibe escudo
+Bot2 recibe mejoraPrecision
+Bot4 recibe mejoraCargador
+Bot5 recibe cura
+Bot6 recibe mejoraDanio
+Bot8 recibe cura
+Bot0 usa mejoraDanio
+Bot1 usa escudo
+Bot2 usa mejoraPrecision
+Bot4 usa mejoraCargador
+Bot5 usa cura
+Bot6 usa mejoraDanio
+Bot8 usa cura
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+Bot9 ataca a Bot0
+RONDA 24
+Jugador1 recibe mejoraPrecision
+Bot0 recibe cura
+Bot1 recibe escudo
+Bot3 recibe escudo
+Bot5 recibe mejoraCargador
+Bot7 recibe cura
+Bot8 recibe escudo
+Bot9 recibe mejoraPrecision
+Jugador1 usa mejoraPrecision
+Bot0 usa cura
+Bot1 usa escudo
+Bot3 usa escudo
+Bot5 usa mejoraCargador
+Bot7 usa cura
+Bot8 usa escudo
+Bot9 usa mejoraPrecision
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+RONDA 25
+Jugador1 recibe mejoraDistancia
+Bot1 recibe mejoraCargador
+Bot2 recibe escudo
+Bot3 recibe mejoraDanio
+Bot4 recibe mejoraCargador
+Bot5 recibe escudo
+Bot7 recibe mejoraDanio
+Bot8 recibe escudo
+Bot9 recibe mejoraDanio
+Jugador1 usa mejoraDistancia
+Bot1 usa mejoraCargador
+Bot2 usa escudo
+Bot3 usa mejoraDanio
+Bot4 usa mejoraCargador
+Bot5 usa escudo
+Bot7 usa mejoraDanio
+Bot8 usa escudo
+Bot9 usa mejoraDanio
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot6 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Bot2 ataca a Bot6
+Combate zona 5
+Bot9 ataca a Bot0
+RONDA 26
+Jugador1 recibe mejoraDistancia
+Bot1 recibe mejoraPrecision
+Bot4 recibe mejoraPrecision
+Bot5 recibe escudo
+Bot6 recibe escudo
+Bot7 recibe mejoraDanio
+Bot8 recibe mejoraCargador
+Jugador1 usa mejoraDistancia
+Bot1 usa mejoraPrecision
+Bot4 usa mejoraPrecision
+Bot5 usa escudo
+Bot6 usa escudo
+Bot7 usa mejoraDanio
+Bot8 usa mejoraCargador
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 27
+Bot1 recibe escudo
+Bot2 recibe escudo
+Bot3 recibe mejoraPrecision
+Bot5 recibe escudo
+Bot6 recibe mejoraCargador
+Bot8 recibe mejoraDanio
+Bot9 recibe mejoraPrecision
+Bot1 usa escudo
+Bot2 usa escudo
+Bot3 usa mejoraPrecision
+Bot5 usa escudo
+Bot6 usa mejoraCargador
+Bot8 usa mejoraDanio
+Bot9 usa mejoraPrecision
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 28
+Bot0 recibe cura
+Bot1 recibe mejoraPrecision
+Bot2 recibe mejoraDanio
+Bot5 recibe mejoraDistancia
+Bot6 recibe mejoraCargador
+Bot8 recibe mejoraDistancia
+Bot9 recibe mejoraCargador
+Bot0 usa cura
+Bot1 usa mejoraPrecision
+Bot2 usa mejoraDanio
+Bot5 usa mejoraDistancia
+Bot6 usa mejoraCargador
+Bot8 usa mejoraDistancia
+Bot9 usa mejoraCargador
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot9 ataca a Bot0
+RONDA 29
+Jugador1 recibe mejoraDistancia
+Bot0 recibe escudo
+Bot1 recibe mejoraDanio
+Bot2 recibe cura
+Bot3 recibe mejoraCargador
+Bot4 recibe cura
+Bot5 recibe mejoraPrecision
+Bot6 recibe cura
+Bot7 recibe mejoraDistancia
+Bot8 recibe mejoraCargador
+Bot9 recibe mejoraCargador
+Jugador1 usa mejoraDistancia
+Bot0 usa escudo
+Bot1 usa mejoraDanio
+Bot2 usa cura
+Bot3 usa mejoraCargador
+Bot4 usa cura
+Bot5 usa mejoraPrecision
+Bot6 usa cura
+Bot7 usa mejoraDistancia
+Bot8 usa mejoraCargador
+Bot9 usa mejoraCargador
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 30
+Bot0 recibe mejoraDanio
+Bot1 recibe mejoraDanio
+Bot2 recibe mejoraDanio
+Bot3 recibe mejoraDistancia
+Bot4 recibe mejoraDistancia
+Bot6 recibe mejoraDistancia
+Bot7 recibe escudo
+Bot8 recibe mejoraPrecision
+Bot9 recibe escudo
+Bot0 usa mejoraDanio
+Bot1 usa mejoraDanio
+Bot2 usa mejoraDanio
+Bot3 usa mejoraDistancia
+Bot4 usa mejoraDistancia
+Bot6 usa mejoraDistancia
+Bot7 usa escudo
+Bot8 usa mejoraPrecision
+Bot9 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 31
+Bot0 recibe mejoraDistancia
+Bot1 recibe mejoraDanio
+Bot2 recibe cura
+Bot4 recibe escudo
+Bot6 recibe mejoraPrecision
+Bot7 recibe mejoraCargador
+Bot8 recibe escudo
+Bot9 recibe escudo
+Bot0 usa mejoraDistancia
+Bot1 usa mejoraDanio
+Bot2 usa cura
+Bot4 usa escudo
+Bot6 usa mejoraPrecision
+Bot7 usa mejoraCargador
+Bot8 usa escudo
+Bot9 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 32
+Bot0 recibe mejoraDistancia
+Bot1 recibe mejoraPrecision
+Bot2 recibe mejoraDistancia
+Bot3 recibe mejoraDanio
+Bot5 recibe cura
+Bot6 recibe escudo
+Bot0 usa mejoraDistancia
+Bot1 usa mejoraPrecision
+Bot2 usa mejoraDistancia
+Bot3 usa mejoraDanio
+Bot5 usa cura
+Bot6 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 33
+Jugador1 recibe escudo
+Bot0 recibe mejoraPrecision
+Bot1 recibe mejoraPrecision
+Bot2 recibe mejoraCargador
+Bot3 recibe mejoraPrecision
+Bot4 recibe mejoraDistancia
+Bot5 recibe mejoraPrecision
+Bot6 recibe mejoraDanio
+Bot9 recibe mejoraPrecision
+Jugador1 usa escudo
+Bot0 usa mejoraPrecision
+Bot1 usa mejoraPrecision
+Bot2 usa mejoraCargador
+Bot3 usa mejoraPrecision
+Bot4 usa mejoraDistancia
+Bot5 usa mejoraPrecision
+Bot6 usa mejoraDanio
+Bot9 usa mejoraPrecision
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 34
+Jugador1 recibe mejoraPrecision
+Bot0 recibe mejoraDanio
+Bot1 recibe mejoraDistancia
+Bot3 recibe cura
+Bot4 recibe cura
+Bot5 recibe cura
+Bot7 recibe cura
+Bot8 recibe mejoraPrecision
+Jugador1 usa mejoraPrecision
+Bot0 usa mejoraDanio
+Bot1 usa mejoraDistancia
+Bot3 usa cura
+Bot4 usa cura
+Bot5 usa cura
+Bot7 usa cura
+Bot8 usa mejoraPrecision
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 35
+Jugador1 recibe escudo
+Bot0 recibe mejoraPrecision
+Bot1 recibe mejoraCargador
+Bot2 recibe mejoraDistancia
+Bot3 recibe mejoraDistancia
+Bot4 recibe escudo
+Bot6 recibe escudo
+Bot7 recibe escudo
+Bot8 recibe escudo
+Bot9 recibe cura
+Jugador1 usa escudo
+Bot0 usa mejoraPrecision
+Bot1 usa mejoraCargador
+Bot2 usa mejoraDistancia
+Bot3 usa mejoraDistancia
+Bot4 usa escudo
+Bot6 usa escudo
+Bot7 usa escudo
+Bot8 usa escudo
+Bot9 usa cura
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 36
+Bot0 recibe cura
+Bot1 recibe mejoraCargador
+Bot3 recibe mejoraCargador
+Bot4 recibe mejoraCargador
+Bot5 recibe mejoraDistancia
+Bot8 recibe cura
+Bot9 recibe cura
+Bot0 usa cura
+Bot1 usa mejoraCargador
+Bot3 usa mejoraCargador
+Bot4 usa mejoraCargador
+Bot5 usa mejoraDistancia
+Bot8 usa cura
+Bot9 usa cura
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 37
+Jugador1 recibe cura
+Bot0 recibe mejoraDistancia
+Bot1 recibe mejoraDistancia
+Bot3 recibe mejoraDanio
+Bot4 recibe cura
+Bot5 recibe mejoraDistancia
+Bot6 recibe mejoraDanio
+Bot7 recibe escudo
+Bot9 recibe mejoraCargador
+Jugador1 usa cura
+Bot0 usa mejoraDistancia
+Bot1 usa mejoraDistancia
+Bot3 usa mejoraDanio
+Bot4 usa cura
+Bot5 usa mejoraDistancia
+Bot6 usa mejoraDanio
+Bot7 usa escudo
+Bot9 usa mejoraCargador
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 38
+Jugador1 recibe mejoraDistancia
+Bot0 recibe mejoraDistancia
+Bot2 recibe mejoraDanio
+Bot3 recibe mejoraDistancia
+Bot4 recibe escudo
+Bot6 recibe mejoraDistancia
+Bot8 recibe cura
+Jugador1 usa mejoraDistancia
+Bot0 usa mejoraDistancia
+Bot2 usa mejoraDanio
+Bot3 usa mejoraDistancia
+Bot4 usa escudo
+Bot6 usa mejoraDistancia
+Bot8 usa cura
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 39
+Jugador1 recibe escudo
+Bot0 recibe mejoraPrecision
+Bot1 recibe cura
+Bot3 recibe mejoraDistancia
+Bot4 recibe cura
+Bot6 recibe mejoraCargador
+Bot7 recibe mejoraDanio
+Bot8 recibe escudo
+Bot9 recibe mejoraDistancia
+Jugador1 usa escudo
+Bot0 usa mejoraPrecision
+Bot1 usa cura
+Bot3 usa mejoraDistancia
+Bot4 usa cura
+Bot6 usa mejoraCargador
+Bot7 usa mejoraDanio
+Bot8 usa escudo
+Bot9 usa mejoraDistancia
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 40
+Jugador1 recibe escudo
+Bot0 recibe cura
+Bot1 recibe mejoraCargador
+Bot2 recibe mejoraPrecision
+Bot4 recibe mejoraDanio
+Bot6 recibe escudo
+Bot7 recibe escudo
+Bot8 recibe cura
+Bot9 recibe mejoraDanio
+Jugador1 usa escudo
+Bot0 usa cura
+Bot1 usa mejoraCargador
+Bot2 usa mejoraPrecision
+Bot4 usa mejoraDanio
+Bot6 usa escudo
+Bot7 usa escudo
+Bot8 usa cura
+Bot9 usa mejoraDanio
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 41
+Jugador1 recibe escudo
+Bot0 recibe mejoraDistancia
+Bot1 recibe cura
+Bot2 recibe mejoraDistancia
+Bot3 recibe mejoraCargador
+Bot4 recibe mejoraDistancia
+Bot5 recibe cura
+Bot8 recibe mejoraCargador
+Bot9 recibe mejoraPrecision
+Jugador1 usa escudo
+Bot0 usa mejoraDistancia
+Bot1 usa cura
+Bot2 usa mejoraDistancia
+Bot3 usa mejoraCargador
+Bot4 usa mejoraDistancia
+Bot5 usa cura
+Bot8 usa mejoraCargador
+Bot9 usa mejoraPrecision
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 42
+Bot0 recibe mejoraDanio
+Bot1 recibe mejoraDistancia
+Bot2 recibe escudo
+Bot4 recibe mejoraCargador
+Bot5 recibe escudo
+Bot6 recibe mejoraDistancia
+Bot7 recibe mejoraDanio
+Bot8 recibe escudo
+Bot9 recibe cura
+Bot0 usa mejoraDanio
+Bot1 usa mejoraDistancia
+Bot2 usa escudo
+Bot4 usa mejoraCargador
+Bot5 usa escudo
+Bot6 usa mejoraDistancia
+Bot7 usa mejoraDanio
+Bot8 usa escudo
+Bot9 usa cura
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot9 ataca a Bot0
+RONDA 43
+Jugador1 recibe mejoraDistancia
+Bot1 recibe escudo
+Bot2 recibe mejoraPrecision
+Bot3 recibe cura
+Bot4 recibe mejoraPrecision
+Bot5 recibe mejoraDanio
+Bot6 recibe cura
+Bot7 recibe mejoraDistancia
+Bot8 recibe mejoraDanio
+Bot9 recibe escudo
+Jugador1 usa mejoraDistancia
+Bot1 usa escudo
+Bot2 usa mejoraPrecision
+Bot3 usa cura
+Bot4 usa mejoraPrecision
+Bot5 usa mejoraDanio
+Bot6 usa cura
+Bot7 usa mejoraDistancia
+Bot8 usa mejoraDanio
+Bot9 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 44
+Jugador1 recibe mejoraDistancia
+Bot0 recibe mejoraDistancia
+Bot1 recibe escudo
+Bot2 recibe cura
+Bot3 recibe mejoraPrecision
+Bot5 recibe mejoraDanio
+Bot6 recibe mejoraDanio
+Bot7 recibe escudo
+Bot8 recibe cura
+Bot9 recibe mejoraPrecision
+Jugador1 usa mejoraDistancia
+Bot0 usa mejoraDistancia
+Bot1 usa escudo
+Bot2 usa cura
+Bot3 usa mejoraPrecision
+Bot5 usa mejoraDanio
+Bot6 usa mejoraDanio
+Bot7 usa escudo
+Bot8 usa cura
+Bot9 usa mejoraPrecision
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 45
+Jugador1 recibe mejoraCargador
+Bot2 recibe mejoraDanio
+Bot3 recibe mejoraDanio
+Bot5 recibe mejoraPrecision
+Bot6 recibe cura
+Bot7 recibe mejoraPrecision
+Bot9 recibe mejoraCargador
+Jugador1 usa mejoraCargador
+Bot2 usa mejoraDanio
+Bot3 usa mejoraDanio
+Bot5 usa mejoraPrecision
+Bot6 usa cura
+Bot7 usa mejoraPrecision
+Bot9 usa mejoraCargador
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 46
+Jugador1 recibe cura
+Bot0 recibe escudo
+Bot3 recibe escudo
+Bot5 recibe mejoraDanio
+Bot6 recibe mejoraCargador
+Bot8 recibe cura
+Bot9 recibe escudo
+Jugador1 usa cura
+Bot0 usa escudo
+Bot3 usa escudo
+Bot5 usa mejoraDanio
+Bot6 usa mejoraCargador
+Bot8 usa cura
+Bot9 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 47
+Jugador1 recibe mejoraPrecision
+Bot0 recibe mejoraPrecision
+Bot1 recibe mejoraDanio
+Bot4 recibe mejoraDistancia
+Bot5 recibe escudo
+Bot6 recibe mejoraDanio
+Bot7 recibe mejoraDanio
+Bot8 recibe mejoraPrecision
+Bot9 recibe mejoraDanio
+Jugador1 usa mejoraPrecision
+Bot0 usa mejoraPrecision
+Bot1 usa mejoraDanio
+Bot4 usa mejoraDistancia
+Bot5 usa escudo
+Bot6 usa mejoraDanio
+Bot7 usa mejoraDanio
+Bot8 usa mejoraPrecision
+Bot9 usa mejoraDanio
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot9 ataca a Bot0
+RONDA 48
+Jugador1 recibe cura
+Bot0 recibe mejoraDistancia
+Bot3 recibe mejoraDistancia
+Bot5 recibe mejoraDistancia
+Bot6 recibe mejoraPrecision
+Bot7 recibe mejoraDistancia
+Bot8 recibe mejoraCargador
+Bot9 recibe mejoraDistancia
+Jugador1 usa cura
+Bot0 usa mejoraDistancia
+Bot3 usa mejoraDistancia
+Bot5 usa mejoraDistancia
+Bot6 usa mejoraPrecision
+Bot7 usa mejoraDistancia
+Bot8 usa mejoraCargador
+Bot9 usa mejoraDistancia
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+Bot0 ataca a Bot9
+RONDA 49
+Jugador1 recibe cura
+Bot0 recibe mejoraCargador
+Bot2 recibe mejoraPrecision
+Bot3 recibe mejoraCargador
+Bot5 recibe mejoraDistancia
+Bot6 recibe mejoraDistancia
+Bot7 recibe mejoraPrecision
+Bot8 recibe escudo
+Bot9 recibe mejoraCargador
+Jugador1 usa cura
+Bot0 usa mejoraCargador
+Bot2 usa mejoraPrecision
+Bot3 usa mejoraCargador
+Bot5 usa mejoraDistancia
+Bot6 usa mejoraDistancia
+Bot7 usa mejoraPrecision
+Bot8 usa escudo
+Bot9 usa mejoraCargador
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot1 ataca a Bot7
+Combate zona 3
+Combate zona 4
+Combate zona 5
+RONDA 50
+Jugador1 recibe mejoraCargador
+Bot0 recibe mejoraPrecision
+Bot1 recibe mejoraPrecision
+Bot2 recibe escudo
+Bot3 recibe mejoraCargador
+Bot4 recibe mejoraDanio
+Bot5 recibe cura
+Bot6 recibe mejoraPrecision
+Bot7 recibe cura
+Bot8 recibe escudo
+Jugador1 usa mejoraCargador
+Bot0 usa mejoraPrecision
+Bot1 usa mejoraPrecision
+Bot2 usa escudo
+Bot3 usa mejoraCargador
+Bot4 usa mejoraDanio
+Bot5 usa cura
+Bot6 usa mejoraPrecision
+Bot7 usa cura
+Bot8 usa escudo
+Bot0 daño tormenta
+Bot1 daño tormenta
+Bot2 daño tormenta
+Bot3 daño tormenta
+Bot7 daño tormenta
+Bot8 daño tormenta
+Bot9 daño tormenta
+Combate zona 2
+Bot7 ataca a Bot1
+Combate zona 3
+Combate zona 4
+Combate zona 5
+GANADOR Bot9
