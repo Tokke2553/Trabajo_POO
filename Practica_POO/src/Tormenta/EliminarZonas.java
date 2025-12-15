@@ -44,6 +44,8 @@ public class EliminarZonas {
 			}
 			return zonaDestruida;
 		}
+		
+		
 		public void ciudadesSeguras() {
 			//ciudades seguras
 			for(int i=0;i<3;i++){				

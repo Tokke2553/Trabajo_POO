@@ -2,7 +2,6 @@ package Paquete;
 
 import java.util.*;
 import javax.swing.JOptionPane;
-import Tormenta.*; 
 import Personajes.*;
 
 public class GestionRonda {
@@ -16,68 +15,63 @@ public class GestionRonda {
         System.out.println("Controlador de Rondas inicializado.");
     }
 
-    
     public void ejecutarCicloRonda() {
         System.out.println("\n=== INICIANDO RONDA " + numeroRonda + " ===");
 
-        // 1. Fase de Tormenta (Destruir una zona y actualizar el mapa)
+        // 1. Fase de Tormenta
         this.zonaDestruidaRonda = partida.getTormenta().cambioArray();
         System.out.println("Tormenta: Zona destruida: " + zonaDestruidaRonda);
-        
-        // 2. Fase de Movimiento (Elección de zona por bots y jugador humano)
+
+        // 2. Fase de Movimiento
         moverEquipos();
 
-        // 3. Fase de Objetos (Solo a partir de la ronda 2)
+        // 3. Fase de Objetos (desde ronda 2)
         if (numeroRonda >= 2) {
             aplicarFaseObjetos();
         }
 
-        // 4. Fase de Combate (Tanto la eliminación del 50% como los combates por equipo)
+        // 4. Fase de Combate
         resolverCombateProgresivo();
 
-        // 5. Preparación para la siguiente: Limpiar jugadores muertos de la lista global
+        // 5. Actualizar lista global
         partida.actualizarJugadoresGlobales();
-        
+
         System.out.println("Jugadores restantes: " + partida.getJugadores().size());
-        
-        // 6. Verificar si la partida terminó
+
+        // 6. Comprobar fin de partida
         if (partida.getJugadores().size() <= 1) {
-             Jugador ganador = partida.getJugadores().isEmpty() ? null : partida.getJugadores().get(0);
-             if (ganador != null) {
+            Jugador ganador = partida.getJugadores().isEmpty() ? null : partida.getJugadores().get(0);
+            if (ganador != null) {
                 System.out.println("¡Ganador: " + ganador.getNombre() + "!");
                 JOptionPane.showMessageDialog(null, "¡Ganador: " + ganador.getNombre() + "!");
-             } else {
-                 System.out.println("No hay ganadores.");
-             }
+            } else {
+                System.out.println("No hay ganadores.");
+            }
         }
 
         numeroRonda++;
     }
-    
-    /**
-     * Maneja el movimiento de bots y solicita la zona al jugador humano (como en tu lógica original).
-     */
+
+    // Mover equipos (bots aleatorios, jugador humano elige)
     private void moverEquipos() {
-        Map<Integer, List<List<Jugador>>> equiposActuales = partida.getEquiposPorZona();
+        Map<Integer, List<List<Jugador>>> equiposActuales = partida.imprimirEquiposPorZona();
         Map<Integer, List<List<Jugador>>> proximosEquiposPorZona = new HashMap<>();
-        
         for (int i = 1; i <= 9; i++) proximosEquiposPorZona.put(i, new ArrayList<>());
-        
+
         Random random = partida.getRandom();
+        int zonaHumano = 5; // Forzar zona para humano en pruebas
 
         for (Map.Entry<Integer, List<List<Jugador>>> entry : equiposActuales.entrySet()) {
             for (List<Jugador> equipo : entry.getValue()) {
                 if (equipo.isEmpty()) continue;
+
                 int nuevaZona;
-                
-                // Asumiendo que el primer jugador del equipo decide por el equipo
-                Jugador lider = equipo.get(0); 
-                
+                Jugador lider = equipo.get(0);
+
                 do {
                     if (lider.isBot()) {
-                        nuevaZona = random.nextInt(9) + 1;
+                        nuevaZona = zonaHumano; // bots van a la zona del humano
                     } else {
-                        // Lógica para pedir zona al jugador humano
                         String input = JOptionPane.showInputDialog(
                                 null,
                                 lider.getNombre() + ", elige zona (1-9) evitando la destruida " + zonaDestruidaRonda + ":",
@@ -94,96 +88,89 @@ public class GestionRonda {
                 proximosEquiposPorZona.get(nuevaZona).add(equipo);
             }
         }
-        
-        // Actualizar el mapa de zonas en la partida
-        partida.setEquiposPorZona(proximosEquiposPorZona); 
+
+        partida.setEquiposPorZona(proximosEquiposPorZona);
     }
 
-
-    /**
-     * Simula el uso de objetos para todos los jugadores vivos.
-     */
+    // Uso de objetos por jugadores vivos
     private void aplicarFaseObjetos() {
         for (Jugador j : partida.getJugadores()) {
-            if (j.objeto != null && j.estadoJugador()) {
-                j.objeto.usar(j);
-                System.out.println(j.getNombre() + " usó su objeto: " + j.objeto.getNombre());
-                j.objeto = null; // Se consume el objeto
+            if (j.getObjeto() != null && j.estadoJugador()) {
+                j.usarObjeto();
             }
         }
     }
 
-    /**
-     * Implementa la lógica de eliminación del 50% por zona, 
-     * seguida por los combates por equipos (tu lógica original).
-     */
+    // Combate progresivo por zona
     private void resolverCombateProgresivo() {
-        Map<Integer, List<List<Jugador>>> equiposPorZona = partida.getEquiposPorZona();
+        Map<Integer, List<List<Jugador>>> equiposPorZona = partida.imprimirEquiposPorZona();
         Random random = partida.getRandom();
 
         for (int zona = 1; zona <= 9; zona++) {
             List<List<Jugador>> listaEquipos = equiposPorZona.get(zona);
-            
-            // 1. Limpiar equipos vacíos y verificar si hay que luchar
+            if (listaEquipos == null || listaEquipos.isEmpty()) continue;
+
+            // Limpiar jugadores muertos en cada equipo
+            for (List<Jugador> equipo : listaEquipos) {
+                equipo.removeIf(j -> !j.estadoJugador());
+            }
             listaEquipos.removeIf(List::isEmpty);
             if (listaEquipos.size() < 2) continue;
 
             System.out.println("\nZona " + zona + ": " + listaEquipos.size() + " equipos");
 
-            // --- 1.a Fase de Eliminación 50% (La nueva regla) ---
+            // --- Eliminación 50% ---
             List<Jugador> jugadoresEnZona = new ArrayList<>();
-            for(List<Jugador> equipo : listaEquipos) {
-                for(Jugador j : equipo) {
-                     if(j.estadoJugador()) jugadoresEnZona.add(j);
-                }
+            for (List<Jugador> equipo : listaEquipos) {
+                jugadoresEnZona.addAll(equipo);
             }
 
             int n = jugadoresEnZona.size();
             if (n >= 2) {
-                int eliminadosEnEstaRonda = (int) Math.floor(n / 2.0);
-                
-                System.out.println(" [Fase Progresiva] Jugadores en zona: " + n + ". Eliminando a " + eliminadosEnEstaRonda);
+                int eliminados = n / 2;
                 Collections.shuffle(jugadoresEnZona, random);
-                
-                // La mitad perdedora es eliminada instantáneamente
-                for (int i = 0; i < eliminadosEnEstaRonda; i++) {
+                System.out.println(" [Fase Progresiva] Jugadores en zona: " + n + ". Eliminando a " + eliminados);
+
+                for (int i = 0; i < eliminados; i++) {
                     Jugador perdedor = jugadoresEnZona.get(i);
-                    // Dano letal (simulando que perdieron el duelo progresivo)
-                    perdedor.recibirDanio(9999); 
+                    perdedor.recibirDanio(9999);
                     System.out.println("   -> Eliminado progresivo: " + perdedor.getNombre());
                 }
             }
 
-
-            // --- 1.b Fase de Combate por Equipos (Tu lógica original) ---
-            
-            // Recargar listaEquipos, ya que jugadores en su interior pueden haber muerto
+            // --- Combate por equipos ---
             List<List<Jugador>> listaEquiposVivos = new ArrayList<>();
-            for(List<Jugador> equipo : listaEquipos) {
-                equipo.removeIf(j -> !j.estadoJugador()); // Quitar muertos
+            for (List<Jugador> equipo : listaEquipos) {
+                equipo.removeIf(j -> !j.estadoJugador());
                 if (!equipo.isEmpty()) listaEquiposVivos.add(equipo);
             }
-            
+
             Collections.shuffle(listaEquiposVivos, random);
             List<List<Jugador>> ganadoresZona = new ArrayList<>();
             int i = 0;
-            
-            // Mientras haya al menos 2 equipos para luchar
             while (i < listaEquiposVivos.size() - 1) {
                 List<Jugador> equipoA = listaEquiposVivos.get(i);
                 List<Jugador> equipoB = listaEquiposVivos.get(i + 1);
-                
-                // Usa el método de combate de la clase Partida
-                List<Jugador> ganador = partida.simularCombate(equipoA, equipoB); 
+
+                List<Jugador> ganador = partida.simularCombate(equipoA, equipoB);
                 if (ganador != null) ganadoresZona.add(ganador);
                 i += 2;
             }
-            
-            // Si queda un equipo impar, pasa a la siguiente ronda
-            if (i < listaEquiposVivos.size()) ganadoresZona.add(listaEquiposVivos.get(i));
+            if (i < listaEquiposVivos.size()) {
+                ganadoresZona.add(listaEquiposVivos.get(i));
+            }
 
-            // El mapa de equipos para la siguiente ronda solo contiene a los ganadores/supervivientes
+            // Actualizar zona con ganadores
             equiposPorZona.put(zona, ganadoresZona);
+
+            // Mostrar ganadores de la zona
+            System.out.print("Ganadores en zona " + zona + ": ");
+            for (List<Jugador> eq : ganadoresZona) {
+                for (Jugador j : eq) {
+                    System.out.print(j.getNombre() + " ");
+                }
+            }
+            System.out.println();
         }
     }
 }
