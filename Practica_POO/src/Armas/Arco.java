@@ -7,11 +7,7 @@ public class Arco extends Arma{
 	}
 
 	    public String toString() {
-	        return getNombre() 
-	             + " (Daño: " + getDanio() 
-	             + ", Precisión: " + getPrecision() 
-	             + ", Alcance: " + getDistancia() 
-	             + ", Tamaño de cargador: " + getCargador() + ")";  
+	        return getNombre() + " (Daño: " + getDanio()  + ", Precisión: " + getPrecision() + ", Alcance: " + getDistancia() + ", Tamaño de cargador: " + getCargador() + ")";  
 	    }
 	
 
