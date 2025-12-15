@@ -34,21 +34,21 @@ public class MapaGUI {
     }
 
     private void cargarImagen() {
-        try {
-            // Intenta cargar el recurso desde la misma carpeta (classpath) de la clase MapaGUI
+        try {//como no recogia la imagen de fondo a pesar de tener bien la ruta
+            // La IA recomendo usar la funcion URL , para intentar generalo en el Paquete
             java.net.URL url = getClass().getResource("mapaF.jpg"); 
 
             if (url != null) {
                 imagenFondo = new ImageIcon(url).getImage();
-                System.out.println("Imagen cargada con éxito desde el Classpath: " + url);
+                System.out.println("Imagen cargada" + url);
             } else {
-                // Fallback de depuración (menos fiable)
+                // Metodo con file por si el primero diese error
                 File file = new File("mapaF.jpg"); 
                 if (file.exists()) {
                     imagenFondo = new ImageIcon(file.getAbsolutePath()).getImage();
-                    System.err.println("Imagen cargada con éxito usando File (ruta relativa): " + file.getAbsolutePath());
+                    System.err.println("Imagen cargada");
                 } else {
-                    System.err.println("ERROR CRÍTICO: No se encontró 'mapaF.jpg'. Verifique que esté en la carpeta Paquete/");
+                    System.err.println("No se ha cargado la imagen");
                 }
             }
         } catch (Exception e) {
