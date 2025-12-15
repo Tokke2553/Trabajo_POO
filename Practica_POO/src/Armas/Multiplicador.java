@@ -12,7 +12,7 @@ public class Multiplicador {
     }
 
     private void establecerDificultad(String dificultad) {
-        String dificultadNormalizada = dificultad.toLowerCase();
+        String dificultadNormalizada = dificultad.toLowerCase().replace("í", "i");
 
         switch (dificultadNormalizada) {
             case "facil":
@@ -27,6 +27,7 @@ public class Multiplicador {
                 break;
         }
     }
+
 
     public float getMultiplicador() {
         return multiplicadorActual;

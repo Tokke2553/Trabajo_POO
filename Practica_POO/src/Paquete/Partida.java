@@ -1,14 +1,13 @@
 package Paquete;
+
 import Armas.*;
 import Tormenta.*;
 import Objetos.*;
 import java.util.*;
 import Personajes.*;
-import javax.swing.JOptionPane;
 
 public class Partida {
     private List<Jugador> jugadores = new ArrayList<>();
-    // Estructura original del usuario: Map<Zona, List<Equipo>>
     private Map<Integer, List<List<Jugador>>> equiposPorZona = new HashMap<>();
     private Random random = new Random();
     private ArrayMapa mapa;
@@ -17,41 +16,44 @@ public class Partida {
     private String dificultadPartida;
     private Multiplicador multiplicador;
 
-
-    public Partida(ArrayMapa mapa,String dificultad) {
+    public Partida(ArrayMapa mapa, String dificultad) {
         this.mapa = mapa;
         this.tormenta = new EliminarZonas(mapa);
-        
-        //Inicializar dificultad
+
+        // Inicializar dificultad
         this.dificultadPartida = dificultad;
-        this.multiplicador= new Multiplicador(dificultad);
+        this.multiplicador = new Multiplicador(dificultad);
         System.out.println("Partida creada en dificultad: " + dificultad.toUpperCase());
-        
+
         // Inicializar zonas
         for (int i = 1; i <= 9; i++) {
             equiposPorZona.put(i, new ArrayList<>());
         }
     }
 
+    // Crear jugador humano
     public void crearJugador(String nombre, ClasePersonaje tipo) {
-        Jugador j = new Jugador(nombre, tipo, PoolArmas.armaPara(tipo), Jugador.obtenerObjetoAleatorio(), false );
+        Jugador j = new Jugador(nombre, tipo, PoolArmas.armaPara(tipo), Jugador.obtenerObjetoAleatorio(), false);
         jugadores.add(j);
+        System.out.println("Jugador creado: " + nombre + " como " + tipo.getPersonaje());
     }
 
+    // Crear bots
     public void crearBots(int cantidad) {
-        for(int i=0; i < cantidad && i < 100; i++) {
+        for (int i = 0; i < cantidad && i < 100; i++) {
             ClasePersonaje tipo = ClasePersonaje.obtenerClases()[random.nextInt(3)];
             float factorDificultad = this.multiplicador.getMultiplicador();
-            System.out.println("Creando " + cantidad + " bots. Multiplicador de daño del bot: x" + factorDificultad);
-            Jugador bot = new Jugador("Bot_" + (i + 1), tipo,PoolArmas.armaPara(tipo),Jugador.obtenerObjetoAleatorio(),true);
+            System.out.println("Multiplicador para dificultad " + dificultadPartida + " = " + factorDificultad);
+            Jugador bot = new Jugador("Bot_" + (i + 1), tipo, PoolArmas.armaPara(tipo), Jugador.obtenerObjetoAleatorio(), true);
             bot.setDificultadAtaque(factorDificultad);
-            jugadores.add(bot); //
-         }
+            jugadores.add(bot);
+            System.out.println("Creando " + bot.getNombre() + ". Multiplicador de daño del bot: x" + factorDificultad);
+        }
     }
 
-    // Método para formar equipos - Sin cambios
-    private List<List<Jugador>> formarEquipos(int jugadoresPorEquipo) {
-        List<List<Jugador>>equipos = new ArrayList<>();
+    // Formar equipos según modo de juego
+    public List<List<Jugador>> formarEquipos(int jugadoresPorEquipo) {
+        List<List<Jugador>> equipos = new ArrayList<>();
         List<Jugador> copiaJugadores = new ArrayList<>(jugadores);
         Collections.shuffle(copiaJugadores, random);
 
@@ -65,113 +67,86 @@ public class Partida {
         return equipos;
     }
 
-    // Método para inicializar equipos en zonas - Sin cambios
+    // Asignar equipos a zonas
     public void inicializarEquipos(List<List<Jugador>> todosLosEquipos) {
         for (int i = 1; i <= 9; i++) {
             equiposPorZona.put(i, new ArrayList<>());
-        } 
+        }
         for (List<Jugador> equipo : todosLosEquipos) {
             if (!equipo.isEmpty()) {
                 int zonaAsignada = random.nextInt(9) + 1;
                 equiposPorZona.get(zonaAsignada).add(equipo);
 
-                // Mostrar en consola
                 String nombres = "";
                 for (Jugador j : equipo) nombres += j.getNombre() + " ";
                 System.out.println("Equipo (" + nombres.trim() + ") asignado a Zona " + zonaAsignada);
             }
         }
     }
-    
-    // MÉTODO ELIMINADO: public void iniciarBatalla(int jugadoresPorEquipo) {}
-    
-    
-    // Simulación de combate entre dos equipos - Sin cambios
-    // NOTA: Este método es ahora public para que GestionRonda lo pueda usar.
+
+    // Simular combate entre dos equipos
     public List<Jugador> simularCombate(List<Jugador> equipoA, List<Jugador> equipoB) {
         List<Jugador> todos = new ArrayList<>();
         todos.addAll(equipoA);
         todos.addAll(equipoB);
-        int turno = 1; // Variable no usada, pero mantenida por fidelidad.
 
         while (!equipoA.isEmpty() && !equipoB.isEmpty()) {
-            // Eliminar jugadores muertos antes de barajar
             equipoA.removeIf(j -> !j.estadoJugador());
             equipoB.removeIf(j -> !j.estadoJugador());
-            
-            if(equipoA.isEmpty() || equipoB.isEmpty()) break;
+
+            if (equipoA.isEmpty() || equipoB.isEmpty()) break;
 
             todos.clear();
             todos.addAll(equipoA);
             todos.addAll(equipoB);
-            
+
             Collections.shuffle(todos, random);
-            
+
             for (Jugador atacante : new ArrayList<>(todos)) {
                 if (!atacante.estadoJugador()) continue;
                 List<Jugador> objetivo = equipoA.contains(atacante) ? equipoB : equipoA;
                 if (objetivo.isEmpty()) break;
                 Jugador defensor = objetivo.get(random.nextInt(objetivo.size()));
                 atacante.atacar(defensor);
-                if (!defensor.estadoJugador()) {
-                    objetivo.remove(defensor);
-                    // No remover de 'todos' aquí, se limpia al final del bucle interno
-                }
             }
-            // Limpieza al final del turno
-            todos.removeIf(j -> !j.estadoJugador()); 
         }
 
         if (!equipoA.isEmpty()) return equipoA;
         if (!equipoB.isEmpty()) return equipoB;
         return null;
     }
-    
-    // --- NUEVOS MÉTODOS PÚBLICOS PARA GESTIONRONDA ---
 
-    /**
-     * Reconstruye la lista global 'jugadores' a partir de los equipos que sobrevivieron.
-     * Esto limpia a los jugadores que murieron en combate o por eliminación progresiva.
-     */
+    // Reconstruir lista global de jugadores
     public void actualizarJugadoresGlobales() {
         jugadores.clear();
         for (List<List<Jugador>> listaEquipos : equiposPorZona.values()) {
             for (List<Jugador> eq : listaEquipos) {
-                 // Quitar cualquier jugador que haya muerto en la ronda actual
                 eq.removeIf(j -> !j.estadoJugador());
                 jugadores.addAll(eq);
             }
         }
     }
-    
-    // Getters necesarios para que GestionRonda acceda a los datos de Partida
-    
-    public List<Jugador> getJugadores() {
-        return jugadores;
-    }
 
-    public ArrayMapa getMapa() {
-        return mapa;
-    }
-    
+    // Getters y setters
+    public List<Jugador> getJugadores() { 
+    	return jugadores; 
+    	}
+    public ArrayMapa getMapa() { 
+    	return mapa; 
+    	}
     public EliminarZonas getTormenta() {
-        return tormenta;
-    }
+    	return tormenta; 
+    	}
+    public Random getRandom() { 
+    	return random; 
+    	}
+    public Map<Integer, List<List<Jugador>>> getEquiposPorZona() { 
+    	return equiposPorZona; 
+    	}
+    public void setEquiposPorZona(Map<Integer, List<List<Jugador>>> nuevosEquiposPorZona) { 
+    	this.equiposPorZona = nuevosEquiposPorZona; 
+    	}
 
-    public Random getRandom() {
-        return random;
-    }
-
-    public Map<Integer, List<List<Jugador>>> getEquiposPorZona() {
-        return equiposPorZona;
-    }
-    
-    // Setter necesario para actualizar las zonas después de la fase de movimiento
-    public void setEquiposPorZona(Map<Integer, List<List<Jugador>>> nuevosEquiposPorZona) {
-        this.equiposPorZona = nuevosEquiposPorZona;
-    }
-
-    // Método auxiliar (mantenido del original)
     private int jugadoresTotales() {
         int total = 0;
         for (List<List<Jugador>> listaEquipos : equiposPorZona.values()) {
@@ -180,5 +155,57 @@ public class Partida {
             }
         }
         return total;
+    }
+
+    // --- Método para ejecutar ronda completa ---
+    public void ejecutarRonda(int jugadoresPorEquipo) {
+        // 1. Ejecutar tormenta
+        System.out.println("\n=== Tormenta de esta ronda ===");
+        for (int i = 0; i < 2; i++) {
+            tormenta.cambioArray();
+        }
+        mapa.printArray();
+        tormenta.ciudadesSeguras();
+
+        // 2. Simular combates por zona
+        System.out.println("\n=== Combates de esta ronda ===");
+        for (int zona : equiposPorZona.keySet()) {
+            List<List<Jugador>> equiposEnZona = equiposPorZona.get(zona);
+            if (equiposEnZona.isEmpty()) continue;
+
+            // Combate dentro de cada zona
+            List<Jugador> todosEnZona = new ArrayList<>();
+            for (List<Jugador> equipo : equiposEnZona) {
+                todosEnZona.addAll(equipo);
+            }
+
+            // Combate entre todos en la zona hasta que quede 1 jugador
+            while (todosEnZona.size() > 1) {
+                Collections.shuffle(todosEnZona, random);
+                for (int i = 0; i < todosEnZona.size(); i++) {
+                    Jugador atacante = todosEnZona.get(i);
+                    if (!atacante.estadoJugador()) continue;
+                    // Elegir un objetivo aleatorio
+                    List<Jugador> posiblesObjetivos = new ArrayList<>(todosEnZona);
+                    posiblesObjetivos.remove(atacante);
+                    if (posiblesObjetivos.isEmpty()) break;
+                    Jugador defensor = posiblesObjetivos.get(random.nextInt(posiblesObjetivos.size()));
+                    atacante.atacar(defensor);
+                }
+                // Eliminar jugadores muertos
+                todosEnZona.removeIf(j -> !j.estadoJugador());
+            }
+
+            // Reorganizar zona con el ganador restante (si lo hay)
+            equiposEnZona.clear();
+            if (!todosEnZona.isEmpty()) {
+                List<Jugador> ganador = new ArrayList<>();
+                ganador.add(todosEnZona.get(0));
+                equiposEnZona.add(ganador);
+            }
+        }
+
+        // 3. Actualizar lista global
+        actualizarJugadoresGlobales();
     }
 }
