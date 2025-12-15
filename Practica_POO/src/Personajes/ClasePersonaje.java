@@ -113,6 +113,9 @@ public abstract class ClasePersonaje {
 	    return new ClasePersonaje[] { new Enano(), new Normal(), new Gigante() };
 	}
 
+
+	
+
 	 
 	 
 }

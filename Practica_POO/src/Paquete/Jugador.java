@@ -16,7 +16,7 @@ public class Jugador {
 	    private Arma arma;
 	    public Objetos objeto;
 	    private boolean bot;
-	    private float DificultadAtaque = 1.0f;
+	    private float DificultadAtaque;
 	    ClasePersonaje clase;
 	    
 	    
@@ -131,33 +131,28 @@ public class Jugador {
 	    }
 	    
 	    public void atacar(Jugador enemigo) {
+	        float danioArma = arma.calcularDanio(); 
+	        float danioConMultiplicadores = danioArma * this.multiplicadorDaño;
+	        float danioFinal = danioConMultiplicadores;
 
-	        float danioArma = arma.calcularDanio(); //Daño base de las armas
-	        float danioConMultiplicadores = danioArma * this.multiplicadorDaño; // Daño base arma +  multiplicador daño del objeto
-	        float danioFinal; 
-            if (this.isBot()) {
-                danioFinal = danioConMultiplicadores * this.DificultadAtaque; //Daño dependiento del la dificultad, solo para bot
-            } else {
-                danioFinal = danioConMultiplicadores; // Los jugadores no afectan
-            }
-            
-            
-            //Aplicar escudo antes que la vida
-	        float danioRestante = danioFinal - enemigo.escudo;
-	       if (danioRestante > 0) {
-	    	   enemigo.vida -= danioRestante;
-	    	   enemigo.escudo = 0;
-	    	  
-	       }else {
-	    	   enemigo.escudo -= danioFinal; 
-	    	      
-	       }
-	        
-	       if (enemigo.vida < 0) {
-	    	   enemigo.vida = 0;   
-	       }
+	        if (this.isBot()) {
+	            danioFinal *= this.DificultadAtaque;
+	        }
 
-	        System.out.println(nombre + " ataca a " + enemigo.nombre + " con " + arma.getNombre() + " causando " + danioFinal + " de daño");
+	        // Aplicar escudo
+	        float danioAfectado = danioFinal - enemigo.escudo;
+	        if (danioAfectado > 0) {
+	            enemigo.vida -= danioAfectado;
+	            enemigo.escudo = 0;
+	        } else {
+	            enemigo.escudo -= danioFinal;
+	            danioAfectado = 0; // No afectó la vida
+	        }
+
+	        if (enemigo.vida < 0) enemigo.vida = 0;
+
+	        System.out.println(nombre + " ataca a " + enemigo.nombre + " con " + arma.getNombre() 
+	            + " causando " + danioFinal + " de daño bruto, " + danioAfectado + " a la vida");
 	    }
 	   
 	    

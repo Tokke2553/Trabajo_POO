@@ -28,6 +28,7 @@ public class Multiplicador {
         }
     }
 
+
     public float getMultiplicador() {
         return multiplicadorActual;
     }
