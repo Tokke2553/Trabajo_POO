@@ -50,6 +50,7 @@ public class MapaGUI {
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setLayout(new BorderLayout());
 
+        
         lienzo = new LienzoMapa();
         
         // --- DETECCIÓN DE CLIC PARA VIAJAR ---
