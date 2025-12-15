@@ -2,7 +2,7 @@ package Paquete;
 
 import java.util.*;
 import javax.swing.JOptionPane;
-import Tormenta.*; // Asumiendo que esta es la clase de la tormenta
+import Tormenta.*; 
 import Personajes.*;
 
 public class GestionRonda {
@@ -16,9 +16,7 @@ public class GestionRonda {
         System.out.println("Controlador de Rondas inicializado.");
     }
 
-    /**
-     * Ejecuta el flujo completo de una ronda: Tormenta, Movimiento, Objetos, Combate.
-     */
+    
     public void ejecutarCicloRonda() {
         System.out.println("\n=== INICIANDO RONDA " + numeroRonda + " ===");
 

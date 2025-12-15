@@ -1,5 +1,6 @@
 package Paquete;
 import Personajes.*;
+import Tormenta.ArrayMapa;
 import Armas.*;
 import javax.swing.*;
 import java.awt.*;
@@ -179,11 +180,35 @@ public class SeleccionPersonaje {
         }
     }
 
-    private void finalizarSeleccion() {
+    protected void finalizarSeleccion() {
         ventana.setVisible(false);
         ventana.dispose();
 
-        new SeleccionArmas(jugadores, dificultadSeleccionada);
+        // Pasamos los jugadores y la dificultad a SeleccionArmas
+        new SeleccionArmas(jugadores, dificultadSeleccionada) {
+            @Override
+            protected void finalizarSeleccion() {
+                super.finalizarSeleccion();
+
+                // Una vez elegidas las armas, creamos la partida y el mapa
+                ArrayMapa mapa = new ArrayMapa();
+                mapa.ArrayInicializador();
+
+                Partida partida = new Partida(mapa, dificultadSeleccionada);
+                
+                // Agregamos jugadores humanos y bots a la partida
+                for (Jugador j : jugadores) {
+                    partida.crearJugador(j.nombre, j.clase);
+                }
+
+                int numeroBots = SeleccionPersonaje.this.getNumeroBots();
+                partida.crearBots(numeroBots);
+
+                // Abrir GUI del mapa
+                MapaGUI mapaGUI = new MapaGUI(mapa);
+                mapaGUI.mostrar();
+            }
+        };
     }
 
     private void configurarInterfaz() {

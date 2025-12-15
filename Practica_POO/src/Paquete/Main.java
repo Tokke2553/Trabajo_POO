@@ -3,9 +3,11 @@ package Paquete;
 
 public class Main {
     public static void main(String[] args) {
-        JuegoInterfaz juego = new JuegoInterfaz();
-        juego.mostrar();
-        
-        
+    	SeleccionPersonaje seleccionPersonaje = new SeleccionPersonaje() {
+            protected void finalizarSeleccion() {
+                super.finalizarSeleccion(); 
+
+                            }
+        };
     }
 }

@@ -113,7 +113,7 @@ public class SeleccionArmas {
         mostrarVentanaSeleccion(); 
     }
 
-    private void finalizarSeleccion() {
+    protected void finalizarSeleccion() {
         ventanaArmas.setVisible(false);
         ventanaArmas.dispose();
         
