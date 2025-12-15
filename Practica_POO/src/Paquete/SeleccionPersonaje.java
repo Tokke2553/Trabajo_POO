@@ -99,7 +99,7 @@ public class SeleccionPersonaje {
     }
 
     private boolean preguntarDificultad() {
-        String[] dificultades = {"Fácil", "Intermedio", "Difícil"};
+        String[] dificultades = {"facil", "normal", "dificil"};
         JComboBox<String> dificultadSelector = new JComboBox<>(dificultades);
 
         JPanel panel = new JPanel();
