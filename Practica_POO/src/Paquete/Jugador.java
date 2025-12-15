@@ -95,20 +95,6 @@ public class Jugador {
 	    	}
 	    
 	    
-	  //Gestionar daño
-	    public void recibirDanio(float danio) {
-	        this.vida -= danio;
-
-	        if (this.vida < 0) {
-	            this.vida = 0;
-	            System.out.println(nombre + "ha muerto");
-	        	Logs.getInstance().agregarLog(nombre + " ha muerto");
-	        }
-
-	        System.out.println(nombre + " ha recibido " + danio + " de daño. Vida restante: " + vida);
-	        
-	        
-	    }
 	    
 	    //Depentiendo de la dificultad el bot causa mas o menos daño
 	    public void setDificultadAtaque(float factor) {
@@ -130,6 +116,20 @@ public class Jugador {
 	        }
 	    }
 	    
+	    //Gestionar daño
+	    public void recibirDanio(float danio) {
+	        this.vida -= danio;
+
+	        if (this.vida < 0) {
+	            this.vida = 0;
+	            System.out.println(nombre + "ha muerto");
+	        	Logs.getInstance().agregarLog(nombre + " ha muerto");
+	        }
+
+	        System.out.println(nombre + " ha recibido " + danio + " de daño. Vida restante: " + vida);
+	        
+	        
+	    }
 	    public void atacar(Jugador enemigo) {
 	        float danioArma = arma.calcularDanio(); 
 	        float danioConMultiplicadores = danioArma * this.multiplicadorDaño;

@@ -9,4 +9,5 @@ public class PoolArmas {
 	        Arma[] armas = personaje.getArmas();
 	        return armas[random.nextInt(armas.length)];
 	    }
+	 
 }

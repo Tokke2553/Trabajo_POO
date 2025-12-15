@@ -32,7 +32,8 @@ public class Partida {
     public void crearJugador(String nombre, ClasePersonaje tipo) {
         Jugador j = new Jugador(nombre, tipo, PoolArmas.armaPara(tipo), Jugador.obtenerObjetoAleatorio(), false);
         jugadores.add(j);
-        System.out.println("Jugador creado: " + nombre + " como " + tipo.getPersonaje());
+        System.out.println("Jugador creado: " + nombre + " como " + tipo.getPersonaje() + " y el arma " + j.getArma());
+
     }
 
     public void crearBots(int cantidad) {
@@ -42,7 +43,7 @@ public class Partida {
             Jugador bot = new Jugador("Bot_" + (i + 1), tipo, PoolArmas.armaPara(tipo), Jugador.obtenerObjetoAleatorio(), true);
             bot.setDificultadAtaque(factorDificultad);
             jugadores.add(bot);
-            System.out.println("Creando " + bot.getNombre() + ". Multiplicador de daño del bot: x" + factorDificultad);
+            System.out.println("Creando " + bot.getNombre() + ". Multiplicador de daño del bot: x" + factorDificultad+ " y el arma: " + bot.getArma());
         }
     }
 
