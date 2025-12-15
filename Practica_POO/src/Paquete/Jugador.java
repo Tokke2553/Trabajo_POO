@@ -101,13 +101,13 @@ public class Jugador {
 
 	        if (this.vida < 0) {
 	            this.vida = 0;
+	            System.out.println(nombre + "ha muerto");
+	        	Logs.getInstance().agregarLog(nombre + " ha muerto");
 	        }
 
 	        System.out.println(nombre + " ha recibido " + danio + " de daño. Vida restante: " + vida);
-	        if (vida <0) {
-	        	System.out.println(nombre + "ha muerto");
-	        	Logs.getInstance().agregarLog(nombre + " ha muerto");
-	        }
+	        
+	        
 	    }
 	    
 	    //Depentiendo de la dificultad el bot causa mas o menos daño
