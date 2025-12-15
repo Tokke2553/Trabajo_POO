@@ -62,7 +62,7 @@ public class Jugador {
 	    	vida += cantidad;
 	    	System.out.println(this.nombre + "se ha curado");
 	    	if (vida > vidaMax) {
-	    		vida = 100;
+	    		vida = vidaMax;
 	    	}
 	    }
 	    
